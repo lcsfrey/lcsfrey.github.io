@@ -1,0 +1,46 @@
+<?php
+    session_start();
+?>
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="logincontainer">    
+            <strong>
+                <a class="navbar" href="photos.html">Photography</a>
+                <a class="navbar" href="projects.html">Projects</a>
+                <a class="navbar" href="about.html">About Me</a> 
+            </strong>
+        </div>
+ 
+        <div id="banner">
+            <strong><h1>Lucas Frey</h1></strong>
+            <strong><div style="font-size: 16pt;">Why I'd put a catchy slogan for myself</div></strong>
+        </div> 
+    </header>
+        <!-- 
+        <?php 
+            include("includes/security.php");
+            include("includes/adminsecurity.php");
+        ?>    
+        -->
+
+    <div class="content">
+        <div class="imageboard">
+            <div class="photo">
+                <img src="Lucas.jpg" alt="Mountain View">
+            </div>
+            <div class="photo">
+                <h1>Education</h1>
+            </div>
+            <div class="photo">
+                <h1>This is the second box</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

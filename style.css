@@ -22,6 +22,7 @@ header strong {
     padding-top: 5px;
     margin: 0 auto;
     padding-bottom: 5px;
+    padding-right: 8px;
     min-width : 500px;
     max-width: 1000px;
 }
@@ -39,12 +40,6 @@ header strong {
     color:#BFB48F;
     left: 50%;
     right:50%;
-    
-}
-nav {
-    width: 150px;
-    height: 650px;
-    background-color: burlywood;
 }
 a.navbar:link,
 a.navbar:visited {
@@ -56,6 +51,7 @@ a.navbar:visited {
     padding-bottom: 6px;
     padding-right: 10px;
     padding-left: 10px;
+    margin:-8px;
 }
 a.navbar:hover,
 a.navbar:active {
@@ -65,22 +61,25 @@ a.navbar:active {
 }
 .content {
     font-size: 16px;
+    min-width : 500px;
     max-width: 1000px;
+    height 100%;
     margin: 0 auto;
     background:#BFB48F;
 }
 #home.content {
     text-align: center;
 }
-#storyboard {
+.storyboard {
+    width:calc(100% - 245px);
     float:left;
-    padding-top: 0px;
-    margin-top: 0px;
-    margin-right: 220px;
+    margin-top: 1px;
 }
-#storybox {
-    margin-bottom: 15pt;
-    padding- left: 15px;
+.storybox {
+    padding: 1px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
     min-height: 300px;
     background-color:#564E58;
     color:#BFB48F;
@@ -89,54 +88,41 @@ a.navbar:active {
 #storybox p {
     font-weight: bold;
 }
-#stats{
+.stats{
     float: right;
-    background-color:#564E58;
-    margin-bottom: 15pt;
-    padding-right: 15pt;
-    padding-left: 15pt;
-    padding-top: 15pt;
+    margin-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 15px;
     height: 500px;
-    min-width: 100px;
-    max-width: 150px;
+    width:200px;
     background-color:#564E58;
     color:#BFB48F;
     align-items: center;   
+    text-align: center;
 }
-#stats img {
+.stats img {
     width: 100%;
     margin: 0 auto;
 }
 #categories {
+    font-size: 20px;
     font-weight: bolder;
     float: left;
-    text-align: right;
+    margin-top: 10px;
     margin-right: 5px;
-    width: 80px;
-        padding-left: 15pt;
+    width:100%;
 }
-#QandA {
-    padding-left: 50px;
-    line-height: 25px;
+
+.projectboard {
+    margin-top: -5px;
 }
-#join_header {
-    text-align: center;
-    padding: 50px;
-    margin: 50px;
-    margin-top: 30px;
-    margin-bottom: 0px;
-    padding-bottom: 25px;
-}
-#join {
-    margin: 0 auto;
-    width: 500px;
-    padding-top: 20px;
-    height: 300px;
-    border-bottom: solid;
-    border-bottom-style: groove;
-    border-top: solid;
-    border-top-style: groove;
-    text-align: center;
-    align-items: center;
-    line-height: 35px;
+
+.project {
+    padding-top: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-height: 300px;
+    background-color:#564E58;
+    color:#BFB48F;
 }
