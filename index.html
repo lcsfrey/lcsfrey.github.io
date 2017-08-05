@@ -1,28 +1,55 @@
-<!DOCTYPE html>
+<?php
+    session_start();
+?>
+
+<!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Lucas Frey, Student, Software Developer</title>
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/cv">CV</a></li>
-        		<li><a href="/blog">Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Hi, I'm Lucas Frey!</h1>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:lcsfrey@gmail.com">email</a></li>
-        		<li><a href="https://github.com/lcsfrey">github.com/lcsfrey</a></li>
-			</ul>
-		</footer>
-	</body>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="logincontainer">    
+            <strong>
+                <a class="navbar" href="photos.html">Photography</a>
+                <a class="navbar" href="projects.html">Projects</a>
+                <a class="navbar" href="about.html">About Me</a> 
+            </strong>
+        </div>
+ 
+        <div id="banner">
+            <strong><h1>Lucas Frey</h1></strong>
+            <strong><div style="font-size: 16pt;">Why I'd put a catchy slogan for myself</div></strong>
+        </div> 
+    </header>
+
+
+        <!-- 
+        <?php 
+            include("includes/security.php");
+            include("includes/adminsecurity.php");
+        ?>    
+        -->
+
+    <div class="content">
+        <div class="storyboard">
+            <div class="storybox">
+                <h1>My Story</h1>
+                <p>Back in the 70s, we were but a simple mom and pop cookie cutter shop. Our selection was low but were were proud of our products. In 1981 our shop caught the attention of local news as one of our cookie cutters was used to save someone's life. We gained a lot of popularity that day and since then our business has expanded into the multinational cookie cutting corporation you know and love today.</p>  
+            </div>
+            <div class="storybox">
+                <h1>Education</h1>
+            </div>
+            <div class="storybox">
+                <h1>This is the second box</h1>
+            </div>
+        </div>
+            <div class="stats">
+                <img src="Lucas.jpg" alt="Mountain View">
+                <div class="inline" id="categories">Email</div> lcsfrey@gmail.com<br>
+                <div id="categories">Github</div> github.com/lcsfrey<br>
+                <div id="categories">Linkedin</div>        linkedin.com/in/lcsfrey
+            </div>
+    </div>
+</body>
 </html>
-4
