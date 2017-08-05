@@ -1,0 +1,142 @@
+
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family:monospace;
+    background-color:#BFB48F;
+    align-self: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    
+}
+
+header strong {
+    font-size: 20px;
+}
+
+#logincontainer {
+    background-color:#BFB48F;
+    color:#BFB48F;
+    text-align: right;
+    padding-top: 5px;
+    margin: 0 auto;
+    padding-bottom: 5px;
+    min-width : 500px;
+    max-width: 1000px;
+}
+
+#banner {
+    margin: 0 auto;
+    min-width : 500px;
+    max-width: 1000px;
+    padding-bottom: 45px;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    margin-bottom: 15px;;
+    text-align: center;
+    background: #6a4d71;
+    color:#BFB48F;
+    left: 50%;
+    right:50%;
+    
+}
+nav {
+    width: 150px;
+    height: 650px;
+    background-color: burlywood;
+}
+a.navbar:link,
+a.navbar:visited {
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+    color:#6a4d71;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+a.navbar:hover,
+a.navbar:active {
+    background: #6a4d71;
+    color:#BFB48F;
+    padding-top: 45px;
+}
+.content {
+    font-size: 16px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background:#BFB48F;
+}
+#home.content {
+    text-align: center;
+}
+#storyboard {
+    float:left;
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-right: 220px;
+}
+#storybox {
+    margin-bottom: 15pt;
+    padding- left: 15px;
+    min-height: 300px;
+    background-color:#564E58;
+    color:#BFB48F;
+}
+
+#storybox p {
+    font-weight: bold;
+}
+#stats{
+    float: right;
+    background-color:#564E58;
+    margin-bottom: 15pt;
+    padding-right: 15pt;
+    padding-left: 15pt;
+    padding-top: 15pt;
+    height: 500px;
+    min-width: 100px;
+    max-width: 150px;
+    background-color:#564E58;
+    color:#BFB48F;
+    align-items: center;   
+}
+#stats img {
+    width: 100%;
+    margin: 0 auto;
+}
+#categories {
+    font-weight: bolder;
+    float: left;
+    text-align: right;
+    margin-right: 5px;
+    width: 80px;
+        padding-left: 15pt;
+}
+#QandA {
+    padding-left: 50px;
+    line-height: 25px;
+}
+#join_header {
+    text-align: center;
+    padding: 50px;
+    margin: 50px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    padding-bottom: 25px;
+}
+#join {
+    margin: 0 auto;
+    width: 500px;
+    padding-top: 20px;
+    height: 300px;
+    border-bottom: solid;
+    border-bottom-style: groove;
+    border-top: solid;
+    border-top-style: groove;
+    text-align: center;
+    align-items: center;
+    line-height: 35px;
+}
