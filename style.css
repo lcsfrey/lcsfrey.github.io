@@ -126,3 +126,26 @@ a.navbar:active {
     background-color:#564E58;
     color:#BFB48F;
 }
+.project img {
+    padding: 15px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    width: calc(100% - 300px);
+}
+
+.photo {
+    padding-top: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-width: 700px;
+    min-height: 200px;
+    background-color:#564E58;
+    color:#BFB48F;
+}
+.photo img {
+    padding: 15px;
+    padding-left: 0px;
+    margin-bottom: -5px;
+    width: calc(100% - 200px);
+}
+
