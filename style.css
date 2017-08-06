@@ -130,6 +130,16 @@ a.navbar:active {
 .project img {
     width: calc(100% - 300px);
 }
+.project h1{
+    padding:0px;
+    padding-top:15px;
+    margin-bottom:10px;
+}
+.storybox h1{
+    padding:0px;
+    padding-top:15px;
+    margin-bottom:10px;
+}
 
 #first_box_project{
     margin-top:-6px;
@@ -163,3 +173,4 @@ a.navbar:active {
     width:100%;
     padding-bottom: 15px;
 }
+
