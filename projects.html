@@ -1,8 +1,17 @@
-
 <!DOCTYPE HTML>
 <html>
 <head>
     <link rel="stylesheet" href="style.css">
+    <title>My Projects</title>
+    <style type="text/css">
+.ln { color: #606366; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(128,128,128); }
+.s1 { color: rgb(169,183,198); }
+.s2 { color: rgb(204,120,50); font-weight: bold; }
+.s3 { color: rgb(104,151,187); }
+.s4 { color: rgb(204,120,50); }
+.s5 { color: rgb(0,128,128); }
+</style>
 </head>
 <body>
     <header>
@@ -16,7 +25,7 @@
  
         <div id="banner">
             <strong><h1>Lucas Frey</h1></strong>
-            <strong><div style="font-size: 16pt;">Why I'd put a catchy slogan for myself</div></strong>
+            <strong><div style="font-size: 16pt;">Where I'd put a catchy slogan for myself</div></strong>
         </div> 
     </header>
 
@@ -32,7 +41,256 @@
         <div class="projectboard">
             <div id="first_box_project" class="project">
                 <h1>Project 1</h1>
-                <p>Where my coding projects will go</p>  
+                <TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+Security.py</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">#############################</span><span class="s1"> 
+</span><span class="s0">#                           #</span><span class="s1"> 
+</span><span class="s0">#   Basic Security Camera   #</span><span class="s1"> 
+</span><span class="s0">#       By Lucas Frey       #</span><span class="s1"> 
+</span><span class="s0">#                           #</span><span class="s1"> 
+</span><span class="s0">#############################</span><span class="s1"> 
+</span><span class="s2">import </span><span class="s1">numpy </span><span class="s2">as </span><span class="s1">np 
+</span><span class="s2">import </span><span class="s1">cv2 
+</span><span class="s2">import </span><span class="s1">time 
+ 
+</span><span class="s0"># Global variables</span><span class="s1"> 
+</span><span class="s0"># index of the webcam that the app is using</span><span class="s1"> 
+webcam_choice = </span><span class="s3">0</span><span class="s1"> 
+ 
+</span><span class="s0"># webcam resolution</span><span class="s1"> 
+can_record = </span><span class="s2">False</span><span class="s1"> 
+recording_already_started = </span><span class="s2">False</span><span class="s1"> 
+webcam_resolution = (</span><span class="s3">640</span><span class="s4">, </span><span class="s3">480</span><span class="s1">) 
+ 
+</span><span class="s0"># frame conversion properties</span><span class="s1"> 
+font = cv2.FONT_HERSHEY_SIMPLEX 
+count_frames = </span><span class="s3">0</span><span class="s1"> 
+num_non_zeros = </span><span class="s3">0</span><span class="s1"> 
+cannyMin = </span><span class="s3">80</span><span class="s1"> 
+cannyMax = </span><span class="s3">255</span><span class="s1"> 
+threshMin = </span><span class="s3">170</span><span class="s1"> 
+threshMax = </span><span class="s3">255</span><span class="s1"> 
+minPixels = </span><span class="s3">5000</span><span class="s1"> 
+kernel7 = np.ones((</span><span class="s3">5</span><span class="s4">, </span><span class="s3">5</span><span class="s1">)</span><span class="s4">, </span><span class="s1">np.uint8) 
+kernel5 = np.ones((</span><span class="s3">5</span><span class="s4">, </span><span class="s3">5</span><span class="s1">)</span><span class="s4">, </span><span class="s1">np.uint8) 
+kernel3 = np.ones((</span><span class="s3">3</span><span class="s4">, </span><span class="s3">3</span><span class="s1">)</span><span class="s4">, </span><span class="s1">np.uint8) 
+ 
+ 
+</span><span class="s0"># Read in number to use for new file name</span><span class="s1"> 
+</span><span class="s0"># Initialize recording</span><span class="s1"> 
+</span><span class="s0"># returns a file writing object</span><span class="s1"> 
+</span><span class="s2">def </span><span class="s1">start_recording(): 
+    myfile = open(</span><span class="s5">'output_count.txt'</span><span class="s4">, </span><span class="s5">'r+'</span><span class="s1">) 
+    filecount = -</span><span class="s3">1</span><span class="s1"> 
+    filecount = myfile.read() 
+    myfile.close() 
+    int_filecount = int(filecount) 
+    </span><span class="s2">if </span><span class="s1">int_filecount </span><span class="s2">is </span><span class="s1">-</span><span class="s3">1</span><span class="s1">: 
+        int_filecount = </span><span class="s3">0</span><span class="s1"> 
+    fourcc = cv2.VideoWriter_fourcc(*</span><span class="s5">'XVID'</span><span class="s1">) 
+    str_filecount = str(int_filecount) 
+    filename = </span><span class="s5">'movement_#' </span><span class="s1">+ str_filecount 
+    mytime = time.strftime(</span><span class="s5">&quot;  %d_%m_%Y&quot;</span><span class="s1">) 
+    filename = filename + mytime + </span><span class="s5">'.avi'</span><span class="s1"> 
+    out = cv2.VideoWriter(filename</span><span class="s4">, </span><span class="s1">fourcc</span><span class="s4">, </span><span class="s3">20.0</span><span class="s4">, </span><span class="s1">(</span><span class="s3">640</span><span class="s4">, </span><span class="s3">480</span><span class="s1">)) 
+    int_filecount = int_filecount + </span><span class="s3">1</span><span class="s1"> 
+    myfile = open(</span><span class="s5">'output_count.txt'</span><span class="s4">, </span><span class="s5">'w'</span><span class="s1">) 
+    str_filecount = str(int_filecount) 
+    myfile.write(str_filecount) 
+    myfile.close() 
+    </span><span class="s2">return </span><span class="s1">out 
+ 
+ 
+</span><span class="s0"># Initialize blob detector</span><span class="s1"> 
+</span><span class="s0"># returns a blob detector</span><span class="s1"> 
+</span><span class="s2">def </span><span class="s1">detector(): 
+    params = cv2.SimpleBlobDetector_Params() 
+    </span><span class="s0"># Change thresholds</span><span class="s1"> 
+    params.minThreshold = </span><span class="s3">10</span><span class="s1"> 
+    params.maxThreshold = </span><span class="s3">255</span><span class="s1"> 
+    </span><span class="s0"># Filter by Area.</span><span class="s1"> 
+    params.filterByArea = </span><span class="s2">True</span><span class="s1"> 
+    params.minArea = </span><span class="s3">150</span><span class="s1"> 
+ 
+    detector = cv2.SimpleBlobDetector_create(params) 
+    </span><span class="s2">return </span><span class="s1">detector 
+ 
+</span><span class="s0"># Needed for trackbar initialization</span><span class="s1"> 
+</span><span class="s2">def </span><span class="s1">nothing(x): 
+    x = x 
+    </span><span class="s2">return </span><span class="s1">x 
+</span><span class="s0"># Create a black image, a window</span><span class="s1"> 
+img = np.zeros((</span><span class="s3">300</span><span class="s4">, </span><span class="s3">512</span><span class="s4">, </span><span class="s3">3</span><span class="s1">)</span><span class="s4">, </span><span class="s1">np.uint8) 
+cv2.namedWindow(</span><span class="s5">'image'</span><span class="s1">) 
+</span><span class="s0"># create trackbars for thresholds</span><span class="s1"> 
+cv2.createTrackbar(</span><span class="s5">'cannyMin'</span><span class="s4">, </span><span class="s5">'image'</span><span class="s4">, </span><span class="s3">0</span><span class="s4">, </span><span class="s3">255</span><span class="s4">, </span><span class="s1">nothing) 
+cv2.createTrackbar(</span><span class="s5">'cannyMax'</span><span class="s4">, </span><span class="s5">'image'</span><span class="s4">, </span><span class="s3">0</span><span class="s4">, </span><span class="s3">255</span><span class="s4">, </span><span class="s1">nothing) 
+cv2.createTrackbar(</span><span class="s5">'threshMin'</span><span class="s4">, </span><span class="s5">'image'</span><span class="s4">, </span><span class="s3">10</span><span class="s4">, </span><span class="s3">255</span><span class="s4">, </span><span class="s1">nothing) 
+cv2.createTrackbar(</span><span class="s5">'threshMax'</span><span class="s4">, </span><span class="s5">'image'</span><span class="s4">, </span><span class="s3">255</span><span class="s4">, </span><span class="s3">255</span><span class="s4">, </span><span class="s1">nothing) 
+cv2.createTrackbar(</span><span class="s5">'minPixels'</span><span class="s4">, </span><span class="s5">'image'</span><span class="s4">, </span><span class="s3">1000</span><span class="s4">, </span><span class="s3">10000</span><span class="s4">, </span><span class="s1">nothing) 
+ 
+</span><span class="s0"># update the trackbars</span><span class="s1"> 
+</span><span class="s0"># (NOTE: currently unused. Program is currently reading trackbars from main)</span><span class="s1"> 
+</span><span class="s2">def </span><span class="s1">processes_trackbars(cannyMin</span><span class="s4">, </span><span class="s1">cannyMax</span><span class="s4">, </span><span class="s1">threshMin</span><span class="s4">, </span><span class="s1">threshMax</span><span class="s4">, </span><span class="s1">minPixels): 
+    </span><span class="s0"># get current positions of trackbars</span><span class="s1"> 
+    cannyMin = cv2.getTrackbarPos(</span><span class="s5">'cannyMin'</span><span class="s4">,</span><span class="s5">'image'</span><span class="s1">) 
+    cannyMax = cv2.getTrackbarPos(</span><span class="s5">'cannyMax'</span><span class="s4">,</span><span class="s5">'image'</span><span class="s1">) 
+    threshMin = cv2.getTrackbarPos(</span><span class="s5">'threshMin'</span><span class="s4">,</span><span class="s5">'image'</span><span class="s1">) 
+    threshMax = cv2.getTrackbarPos(</span><span class="s5">'threshMax'</span><span class="s4">,</span><span class="s5">'image'</span><span class="s1">) 
+    minPixels = cv2.getTrackbarPos(</span><span class="s5">'minPixels'</span><span class="s4">, </span><span class="s5">'image'</span><span class="s1">) 
+ 
+</span><span class="s0"># initialize capture to default webcam</span><span class="s1"> 
+</span><span class="s0"># initialize video writer</span><span class="s1"> 
+</span><span class="s0"># initialize detector</span><span class="s1"> 
+</span><span class="s0"># begin reading in frames</span><span class="s1"> 
+cap = cv2.VideoCapture(webcam_choice) 
+out = start_recording() 
+</span><span class="s0">#out_thresh = start_recording()</span><span class="s1"> 
+detector = detector() 
+ret</span><span class="s4">, </span><span class="s1">frame1 = cap.read() 
+</span><span class="s2">while </span><span class="s1">ret </span><span class="s2">is False</span><span class="s1">: 
+    ret</span><span class="s4">, </span><span class="s1">frame1 = cap.read() 
+ret</span><span class="s4">, </span><span class="s1">frame2 = cap.read() 
+</span><span class="s2">while </span><span class="s1">ret </span><span class="s2">is False</span><span class="s1">: 
+    ret</span><span class="s4">, </span><span class="s1">frame2 = cap.read() 
+ 
+</span><span class="s0"># initialize resize data</span><span class="s1"> 
+</span><span class="s0"># initialize older frame timeslots</span><span class="s1"> 
+r = </span><span class="s3">315.0 </span><span class="s1">/ frame1.shape[</span><span class="s3">1</span><span class="s1">] 
+dim = (</span><span class="s3">315</span><span class="s4">, </span><span class="s1">int(frame1.shape[</span><span class="s3">0</span><span class="s1">] * r)) 
+gray1 = cv2.cvtColor(frame1</span><span class="s4">, </span><span class="s1">cv2.COLOR_BGR2GRAY) 
+gray2 = cv2.cvtColor(frame2</span><span class="s4">, </span><span class="s1">cv2.COLOR_BGR2GRAY) 
+difference = cv2.absdiff(gray1</span><span class="s4">, </span><span class="s1">gray2) 
+older_difference = difference.copy() 
+older_resized_threshold = difference.copy() 
+old_gray = gray2.copy() 
+older_gray = gray2.copy() 
+ 
+</span><span class="s0"># Main while loop</span><span class="s1"> 
+</span><span class="s2">while True</span><span class="s1">: 
+    </span><span class="s0"># Keyboard commands</span><span class="s1"> 
+    </span><span class="s0">#   R = Allow/Disallow recording</span><span class="s1"> 
+    </span><span class="s0">#   Q = Quit</span><span class="s1"> 
+    key = cv2.waitKey(</span><span class="s3">1</span><span class="s1">) 
+    </span><span class="s2">if </span><span class="s1">key == ord(</span><span class="s5">'r'</span><span class="s1">): 
+        </span><span class="s2">if </span><span class="s1">can_record </span><span class="s2">is False</span><span class="s1">: 
+            can_record = </span><span class="s2">True</span><span class="s1"> 
+        </span><span class="s2">else</span><span class="s1">: 
+            can_record = </span><span class="s2">False</span><span class="s1"> 
+    </span><span class="s2">if </span><span class="s1">key == ord(</span><span class="s5">'q'</span><span class="s1">): 
+        </span><span class="s2">break</span><span class="s1"> 
+    </span><span class="s0"># Capture frame-by-frame, skipping loop if frame not read</span><span class="s1"> 
+    </span><span class="s0"># Make copies of original frames</span><span class="s1"> 
+    ret</span><span class="s4">, </span><span class="s1">frame2 = cap.read() 
+    </span><span class="s2">if </span><span class="s1">ret </span><span class="s2">is False</span><span class="s1">: 
+        </span><span class="s2">continue</span><span class="s1"> 
+    frame1Copy = frame1.copy() 
+    frame2Copy = frame2.copy() 
+ 
+    </span><span class="s0"># get current positions of trackbars</span><span class="s1"> 
+    cannyMin = cv2.getTrackbarPos(</span><span class="s5">'cannyMin'</span><span class="s4">,</span><span class="s5">'image'</span><span class="s1">) 
+    cannyMax = cv2.getTrackbarPos(</span><span class="s5">'cannyMax'</span><span class="s4">,</span><span class="s5">'image'</span><span class="s1">) 
+    threshMin = cv2.getTrackbarPos(</span><span class="s5">'threshMin'</span><span class="s4">,</span><span class="s5">'image'</span><span class="s1">) 
+    threshMax = cv2.getTrackbarPos(</span><span class="s5">'threshMax'</span><span class="s4">,</span><span class="s5">'image'</span><span class="s1">) 
+    minPixels = cv2.getTrackbarPos(</span><span class="s5">'minPixels'</span><span class="s4">, </span><span class="s5">'image'</span><span class="s1">) 
+ 
+    </span><span class="s0"># Gray and blur images</span><span class="s1"> 
+    gray1 = cv2.cvtColor(frame1</span><span class="s4">, </span><span class="s1">cv2.COLOR_BGR2GRAY) 
+    gray2 = cv2.cvtColor(frame2</span><span class="s4">, </span><span class="s1">cv2.COLOR_BGR2GRAY) 
+    cv2.blur(gray1</span><span class="s4">, </span><span class="s1">(</span><span class="s3">3</span><span class="s4">, </span><span class="s3">3</span><span class="s1">)</span><span class="s4">, </span><span class="s1">gray1) 
+    cv2.blur(gray2</span><span class="s4">, </span><span class="s1">(</span><span class="s3">3</span><span class="s4">, </span><span class="s3">3</span><span class="s1">)</span><span class="s4">, </span><span class="s1">gray2) 
+ 
+    </span><span class="s0"># Difference and Threshold images</span><span class="s1"> 
+    </span><span class="s0"># Combine with threshold older frames, erode image and dilate</span><span class="s1"> 
+    difference = cv2.absdiff(gray1</span><span class="s4">, </span><span class="s1">gray2) 
+    difference_copy = difference.copy() 
+    ret</span><span class="s4">, </span><span class="s1">resized_threshold = cv2.threshold(difference</span><span class="s4">, </span><span class="s1">threshMin</span><span class="s4">, </span><span class="s1">threshMax</span><span class="s4">, </span><span class="s1">cv2.THRESH_BINARY) 
+    resized_threshold_copy = resized_threshold.copy() 
+    cv2.bitwise_or(resized_threshold</span><span class="s4">, </span><span class="s1">older_resized_threshold.copy()</span><span class="s4">, </span><span class="s1">resized_threshold) 
+    cv2.erode(resized_threshold</span><span class="s4">, </span><span class="s1">kernel3</span><span class="s4">, </span><span class="s1">resized_threshold) 
+    cv2.dilate(resized_threshold</span><span class="s4">, </span><span class="s1">kernel5</span><span class="s4">, </span><span class="s1">resized_threshold) 
+    cv2.imshow(</span><span class="s5">'threshold'</span><span class="s4">, </span><span class="s1">resized_threshold) 
+ 
+    </span><span class="s0"># Create canny image</span><span class="s1"> 
+    canny_gray_copy = gray2.copy() 
+    imgCanny = cv2.Canny(canny_gray_copy</span><span class="s4">, </span><span class="s1">cannyMin</span><span class="s4">, </span><span class="s1">cannyMax) 
+    cv2.dilate(imgCanny</span><span class="s4">, </span><span class="s1">kernel3</span><span class="s4">,</span><span class="s1">imgCanny) 
+ 
+    movement = frame2Copy.copy() 
+    </span><span class="s0"># Find and draw contours around movement</span><span class="s1"> 
+    thresh_contours = resized_threshold.copy() 
+    _</span><span class="s4">, </span><span class="s1">cnts</span><span class="s4">, </span><span class="s1">hierarchy = cv2.findContours(thresh_contours</span><span class="s4">, </span><span class="s1">cv2.RETR_TREE</span><span class="s4">,</span><span class="s1">cv2.CHAIN_APPROX_SIMPLE) 
+    max_size = </span><span class="s3">0</span><span class="s1">; 
+    max_size_contour = </span><span class="s2">None</span><span class="s1">; 
+ 
+    </span><span class="s2">for </span><span class="s1">cnt </span><span class="s2">in </span><span class="s1">cnts: 
+        contour_area = cv2.contourArea(cnt) 
+        </span><span class="s2">if </span><span class="s1">contour_area &gt; max_size: 
+            x</span><span class="s4">, </span><span class="s1">y</span><span class="s4">, </span><span class="s1">w</span><span class="s4">, </span><span class="s1">h = cv2.boundingRect(cnt) 
+            cv2.rectangle(movement</span><span class="s4">, </span><span class="s1">(x</span><span class="s4">, </span><span class="s1">y)</span><span class="s4">, </span><span class="s1">(x + w</span><span class="s4">, </span><span class="s1">y + h)</span><span class="s4">, </span><span class="s1">(</span><span class="s3">0</span><span class="s4">, </span><span class="s3">255</span><span class="s4">, </span><span class="s3">0</span><span class="s1">)</span><span class="s4">, </span><span class="s3">2</span><span class="s1">) 
+            max_size_contour = cnt 
+            max_size = contour_area 
+        </span><span class="s2">if </span><span class="s1">contour_area &gt; </span><span class="s3">4000</span><span class="s1">: 
+            cv2.drawContours(movement</span><span class="s4">, </span><span class="s1">cnt</span><span class="s4">, </span><span class="s1">-</span><span class="s3">1</span><span class="s4">, </span><span class="s1">(</span><span class="s3">0</span><span class="s4">, </span><span class="s3">0</span><span class="s4">, </span><span class="s3">255</span><span class="s1">)</span><span class="s4">, </span><span class="s3">3</span><span class="s1">) 
+    </span><span class="s0"># if recording has been enabled</span><span class="s1"> 
+    </span><span class="s0">#   count the area of white pixels in the threshold</span><span class="s1"> 
+    </span><span class="s0">#   if threshold image shows a large amount of white pixels(when there's movement on the screen),</span><span class="s1"> 
+    </span><span class="s0">#       start recording</span><span class="s1"> 
+    </span><span class="s0">#       print the amount of white pixels</span><span class="s1"> 
+    </span><span class="s0">#       activate recording</span><span class="s1"> 
+    </span><span class="s0">#   if we can record</span><span class="s1"> 
+    </span><span class="s0">#       write frame to file</span><span class="s1"> 
+    </span><span class="s0"># else</span><span class="s1"> 
+    </span><span class="s0">#   prints that recording is turned off</span><span class="s1"> 
+    </span><span class="s2">if </span><span class="s1">can_record </span><span class="s2">is True</span><span class="s1">: 
+        </span><span class="s2">if </span><span class="s1">start_recording </span><span class="s2">is False or </span><span class="s1">count_frames % </span><span class="s3">16 </span><span class="s2">is not </span><span class="s3">0</span><span class="s1">: 
+            num_non_zeros = cv2.countNonZero(resized_threshold) 
+        </span><span class="s2">if </span><span class="s3">100000 </span><span class="s1">&gt; num_non_zeros &gt; minPixels: 
+            count_frames = </span><span class="s3">1</span><span class="s1"> 
+            start_recording = </span><span class="s2">True</span><span class="s1"> 
+        </span><span class="s2">if </span><span class="s1">start_recording </span><span class="s2">is True and </span><span class="s3">16 </span><span class="s1">&gt;= count_frames &gt; </span><span class="s3">0</span><span class="s1">: 
+            count_frames += </span><span class="s3">1</span><span class="s1"> 
+            cv2.putText(movement</span><span class="s4">, </span><span class="s5">'Movement Found!'</span><span class="s4">, </span><span class="s1">(</span><span class="s3">5</span><span class="s4">, </span><span class="s3">25</span><span class="s1">)</span><span class="s4">, </span><span class="s1">font</span><span class="s4">, </span><span class="s3">1</span><span class="s4">, </span><span class="s1">(</span><span class="s3">0</span><span class="s4">, </span><span class="s3">255</span><span class="s4">, </span><span class="s3">0</span><span class="s1">)</span><span class="s4">, </span><span class="s3">2</span><span class="s1">) 
+            cv2.putText(movement</span><span class="s4">, </span><span class="s5">'Size of blobs: ' </span><span class="s1">+ str(num_non_zeros)</span><span class="s4">, </span><span class="s1">(</span><span class="s3">5</span><span class="s4">, </span><span class="s3">55</span><span class="s1">)</span><span class="s4">, </span><span class="s1">font</span><span class="s4">, </span><span class="s3">1</span><span class="s4">, </span><span class="s1">(</span><span class="s3">0</span><span class="s4">, </span><span class="s3">255</span><span class="s4">, </span><span class="s3">0</span><span class="s1">)</span><span class="s4">, </span><span class="s3">2</span><span class="s1">) 
+            cv2.putText(movement</span><span class="s4">, </span><span class="s5">'Press R to stop'</span><span class="s4">, </span><span class="s1">(</span><span class="s3">5</span><span class="s4">, </span><span class="s3">85</span><span class="s1">)</span><span class="s4">, </span><span class="s1">font</span><span class="s4">, </span><span class="s3">1</span><span class="s4">, </span><span class="s1">(</span><span class="s3">150</span><span class="s4">, </span><span class="s3">255</span><span class="s4">, </span><span class="s3">50</span><span class="s1">)</span><span class="s4">, </span><span class="s3">2</span><span class="s1">) 
+            out.write(movement) 
+            </span><span class="s0">#thresh_to_write = cv2.cvtColor(resized_threshold.copy(),  cv2.COLOR_GRAY2BGR)</span><span class="s1"> 
+            </span><span class="s0">#out_thresh.write(resized_threshold)</span><span class="s1"> 
+        </span><span class="s2">else</span><span class="s1">: 
+            cv2.putText(movement</span><span class="s4">, </span><span class="s5">'Recording is on'</span><span class="s4">, </span><span class="s1">(</span><span class="s3">5</span><span class="s4">, </span><span class="s3">25</span><span class="s1">)</span><span class="s4">, </span><span class="s1">font</span><span class="s4">, </span><span class="s3">1</span><span class="s4">, </span><span class="s1">(</span><span class="s3">150</span><span class="s4">, </span><span class="s3">255</span><span class="s4">, </span><span class="s3">50</span><span class="s1">)</span><span class="s4">, </span><span class="s3">2</span><span class="s1">) 
+            cv2.putText(movement</span><span class="s4">, </span><span class="s5">'Press R to stop'</span><span class="s4">, </span><span class="s1">(</span><span class="s3">5</span><span class="s4">, </span><span class="s3">55</span><span class="s1">)</span><span class="s4">, </span><span class="s1">font</span><span class="s4">, </span><span class="s3">1</span><span class="s4">, </span><span class="s1">(</span><span class="s3">150</span><span class="s4">, </span><span class="s3">255</span><span class="s4">, </span><span class="s3">50</span><span class="s1">)</span><span class="s4">, </span><span class="s3">2</span><span class="s1">) 
+            count_frames = </span><span class="s3">0</span><span class="s1"> 
+            start_recording = </span><span class="s2">False</span><span class="s1"> 
+    </span><span class="s2">else</span><span class="s1">: 
+        </span><span class="s2">if </span><span class="s1">can_record </span><span class="s2">is not True</span><span class="s1">: 
+            print(</span><span class="s5">&quot;Recording turned off&quot;</span><span class="s1">) 
+            cv2.putText(movement</span><span class="s4">, </span><span class="s5">'Recording is off'</span><span class="s4">, </span><span class="s1">(</span><span class="s3">5</span><span class="s4">, </span><span class="s3">25</span><span class="s1">)</span><span class="s4">, </span><span class="s1">font</span><span class="s4">, </span><span class="s3">1</span><span class="s4">, </span><span class="s1">(</span><span class="s3">0</span><span class="s4">, </span><span class="s3">0</span><span class="s4">, </span><span class="s3">255</span><span class="s1">)</span><span class="s4">, </span><span class="s3">2</span><span class="s1">) 
+            cv2.putText(movement</span><span class="s4">, </span><span class="s5">'Press R to record'</span><span class="s4">, </span><span class="s1">(</span><span class="s3">5</span><span class="s4">, </span><span class="s3">50</span><span class="s1">)</span><span class="s4">, </span><span class="s1">font</span><span class="s4">, </span><span class="s3">1</span><span class="s4">, </span><span class="s1">(</span><span class="s3">0</span><span class="s4">, </span><span class="s3">0</span><span class="s4">, </span><span class="s3">255</span><span class="s1">)</span><span class="s4">, </span><span class="s3">2</span><span class="s1">) 
+        count_frames = </span><span class="s3">0</span><span class="s1"> 
+        start_recording = </span><span class="s2">False</span><span class="s1"> 
+ 
+    </span><span class="s0"># Show frames</span><span class="s1"> 
+    cv2.imshow(</span><span class="s5">&quot;movement&quot;</span><span class="s4">, </span><span class="s1">movement) 
+    </span><span class="s0"># cv2.imshow('gray', gray2)</span><span class="s1"> 
+    </span><span class="s0"># cv2.imshow('canny', imgCanny)</span><span class="s1"> 
+    cv2.imshow(</span><span class="s5">'threshold'</span><span class="s4">, </span><span class="s1">resized_threshold) 
+ 
+    </span><span class="s0"># Push frames into older time slots</span><span class="s1"> 
+    frame1 = frame2Copy.copy() 
+    older_gray = old_gray.copy() 
+    old_gray = gray1.copy() 
+    gray1 = gray2.copy() 
+    older_difference = difference_copy.copy() 
+    older_resized_threshold = resized_threshold_copy.copy() 
+ 
+</span><span class="s0"># Release everything if job is finished</span><span class="s1"> 
+out.release() 
+cap.release() 
+cv2.destroyAllWindows()</span></pre> 
             </div>
             <div class="storybox">
                 <h1>Project 2</h1>
