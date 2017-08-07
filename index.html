@@ -1,0 +1,68 @@
+<?php
+    session_start();
+?>
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>About Me</title>
+</head>
+<body>
+    <header>
+        <div id="logincontainer">    
+            <strong>
+                <a class="navbar" href="index.html">Home</a>
+                <a class="navbar" href="photos.html">Photography</a>
+                <a class="navbar" href="projects.html">Projects</a>
+                <a class="navbar" href="about.html">About Me</a> 
+                <a class="navbar" href="resume.pdf">Resume</a>
+            </strong>
+        </div>
+ 
+        <div id="banner">
+            <strong><h1>Lucas Frey</h1></strong>
+            <strong><div style="font-size: 16pt;">Where I'd put a catchy slogan for myself</div></strong>
+        </div> 
+    </header>
+
+
+        <!-- 
+        <?php 
+            include("includes/security.php");
+            include("includes/adminsecurity.php");
+        ?>    
+        -->
+
+    <div class="content">
+        <div class="storyboard">
+            <div id="first_box" class="storybox">
+                <h1>My Story</h1>
+                <p>Where I'll introduce myself and my goals</p>  
+            </div>
+            <div class="storybox">
+                <h1>Education</h1>
+                <p>Where I went to school</p> 
+            </div>
+            <div class="storybox">
+                <h1>Hobbies</h1>
+                <p>What I love to do</p> 
+            </div>
+        </div>
+            <div class="stats">
+                <img src="img/Lucas.jpg" alt="Image of me.">
+                <div class="inline" id="categories">Email</div>
+                    lcsfrey@gmail.com<br>
+                <div id="categories">Github</div>
+                    github.com/lcsfrey<br>
+                <div id="categories">Linkedin</div>
+                    linkedin.com/in/lcsfrey<br>
+                <div id="categories">Instagram</div>
+                    instagram.com/lcsfrey
+            </div>
+            <div class="stats">
+                <h1 style="padding-top:-15px;">Skills</h1>
+            </div>
+    </div>
+</body>
+</html>
