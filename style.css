@@ -8,10 +8,8 @@ body {
     align-self: center;
     margin-left: 2%;
     margin-right: 2%;
-<<<<<<< HEAD
     min-width: 450px;
-=======
->>>>>>> c3a124afdf89a0d05e9d7068937a0d3e493b6c44
+
     
 }
 
@@ -25,11 +23,7 @@ header strong {
     text-align: right;
     padding-top: 5px;
     margin: 0 auto;
-<<<<<<< HEAD
     min-width : 550px;
-=======
-    min-width : 500px;
->>>>>>> c3a124afdf89a0d05e9d7068937a0d3e493b6c44
     max-width: 1000px;
     left: 50%;
     right:50%;
@@ -37,11 +31,7 @@ header strong {
 
 #banner {
     margin: 0 auto;
-<<<<<<< HEAD
     min-width : 550px;
-=======
-    min-width : 500px;
->>>>>>> c3a124afdf89a0d05e9d7068937a0d3e493b6c44
     max-width: 1000px;
     padding-bottom: 45px;
     padding-top: 15px;
@@ -52,7 +42,6 @@ header strong {
     left: 50%;
     right:50%;
 }
-<<<<<<< HEAD
 
 
 .genrebox {
@@ -62,11 +51,65 @@ header strong {
     max-width: 1000px;
     padding-bottom: 37px;
     padding-top: 15px;
+    margin-top: 15px;
     margin-bottom: 15px;
     text-align: center;
     background: #6a4d71;
     color:#BFB48F;
+    font-weight: bold;
 }
+
+.genrebutton {
+    width: 50%;
+}
+.genrebutton2 {
+    width: 50%;
+}
+
+a.genrebutton:hover, a.genrebutton:active {
+    padding: 15px;
+    padding-top: -15px;
+    margin-top: -17px;
+    margin-left:20px;
+    width:40%;
+    background: #BFB48F;
+    color:#6a4d71;
+    border-color: #BFB48F;
+    border-style: solid;
+        text-decoration: none;
+}
+
+a.genrebutton:link,
+a.genrebutton:visited {
+    width:40%;
+    color:#BFB48F;
+    text-decoration: none;
+}
+
+a.genrebutton2:hover, a.genrebutton2:active {
+    padding: 15px;
+    padding-top: -15px;
+    margin-top: -17px;
+    margin-left:-15px;
+    padding-right = -15px;
+    margin-right: 23px;
+    width:40%;
+    background: #BFB48F;
+    color:#6a4d71;
+    border-color: #BFB48F;
+    border-style: solid;
+    #border-width:15px;
+
+    text-decoration: none;
+}
+
+a.genrebutton2:link,
+a.genrebutton2:visited {
+    width:40%;
+    color:#BFB48F;
+    text-decoration: none;
+}
+
 a.button:link,
 a.button:visited {
     color:#BFB48F;
@@ -82,9 +125,6 @@ a.button:active {
     border-bottom-style: solid;
     text-decoration: none;
 }
-
-=======
->>>>>>> c3a124afdf89a0d05e9d7068937a0d3e493b6c44
 a.navbar:link,
 a.navbar:visited {
     height: 100%;
@@ -94,13 +134,9 @@ a.navbar:visited {
     color:#6a4d71;
     padding-top: 6px;
     padding-bottom: 6px;
-<<<<<<< HEAD
-    padding-right: 4px;
-    padding-left: 4px;
-=======
-    padding-right: 10px;
-    padding-left: 10px;
->>>>>>> c3a124afdf89a0d05e9d7068937a0d3e493b6c44
+
+    padding-right: 5px;
+    padding-left: 5px;
 }
 a.navbar:hover,
 a.navbar:active {
@@ -112,11 +148,8 @@ a.navbar:active {
 }
 .content {
     font-size: 16px;
-<<<<<<< HEAD
-    min-width : 450px;
-=======
     min-width : 500px;
->>>>>>> c3a124afdf89a0d05e9d7068937a0d3e493b6c44
+
     max-width: 1000px;
     height 100%;
     margin: 0 auto;
@@ -199,10 +232,6 @@ a.navbar:active {
     margin-top:-6px;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> c3a124afdf89a0d05e9d7068937a0d3e493b6c44
 .imageboard h1{
     padding:0px;
     margin: 0px;
@@ -211,11 +240,8 @@ a.navbar:active {
 .photo {
     padding: 15px;
     margin-bottom: 15px;
-<<<<<<< HEAD
     min-width: 520px;
-=======
-    min-width: 700px;
->>>>>>> c3a124afdf89a0d05e9d7068937a0d3e493b6c44
+
     min-height: 140px;
     background-color:#564E58;
     color:#BFB48F;
