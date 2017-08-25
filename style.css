@@ -4,27 +4,31 @@ body {
     margin: 0px;
     padding: 0px;
     font-family:monospace;
-    background-color:#BFB48F;
+    background-color:#0f0f0f;
     align-self: center;
-    margin-left: 2%;
-    margin-right: 2%;
+    #margin-left: 2%;
+    #margin-right: 2%;
     min-width: 450px;
 
     
 }
 
+p {
+    text-indent: 50px;
+}
 header strong {
     font-size: 20px;
 }
 
 #logincontainer {
-    background-color:#BFB48F;
-    color:#BFB48F;
+    background-color:#0f0f0f;
     text-align: right;
-    padding-top: 5px;
+    padding-top: 7px;
+    padding-bottom: 13px;
     margin: 0 auto;
-    min-width : 550px;
-    max-width: 1000px;
+    min-width : 500px;
+    margin-top:-1px;
+    #max-width: 1000px;
     left: 50%;
     right:50%;
 }
@@ -32,15 +36,18 @@ header strong {
 #banner {
     margin: 0 auto;
     min-width : 550px;
-    max-width: 1000px;
-    padding-bottom: 45px;
-    padding-top: 15px;
+    padding-bottom: 90px;
+    padding-top: 30px;
     margin-bottom: 15px;;
     text-align: center;
-    background: #6a4d71;
-    color:#BFB48F;
+    background: #0F1626;
+    color:#FF533c;
     left: 50%;
     right:50%;
+}
+
+#banner h1 {
+    font-size: 70px;
 }
 
 
@@ -54,8 +61,8 @@ header strong {
     margin-top: 15px;
     margin-bottom: 15px;
     text-align: center;
-    background: #6a4d71;
-    color:#BFB48F;
+    background: #0F1626;
+    color:#FF533c;
     font-weight: bold;
 }
 
@@ -67,57 +74,30 @@ header strong {
 }
 
 a.genrebutton:hover, a.genrebutton:active {
-    padding: 15px;
-    padding-top: -15px;
-    margin-top: -17px;
-    margin-left:20px;
-    width:40%;
-    background: #BFB48F;
-    color:#6a4d71;
-    border-color: #BFB48F;
+    margin-top:-15px;
+    color:#FF533c;
+    padding-top:5px;
+    padding-bottom:5px;
     border-style: solid;
-        text-decoration: none;
-}
-
-a.genrebutton:link,
-a.genrebutton:visited {
-    width:40%;
-    color:#BFB48F;
+    border-left-style: none;
+    border-right-style: none;
     text-decoration: none;
-}
-
-a.genrebutton2:hover, a.genrebutton2:active {
-    padding: 15px;
-    padding-top: -15px;
-    margin-top: -17px;
-    margin-left:-15px;
-    padding-right = -15px;
-    margin-right: 23px;
-    width:40%;
-    background: #BFB48F;
-    color:#6a4d71;
-    border-color: #BFB48F;
-    border-style: solid;
-    #border-width:15px;
-
-    text-decoration: none;
-}
-
-a.genrebutton2:link,
-a.genrebutton2:visited {
-    width:40%;
-    color:#BFB48F;
-    text-decoration: none;
+    border-top-color: #FF533c;
+    border-top-width: 10px;;
+    border-top-style: solid;
+    border-bottom-color: #FF533c;
+    border-bottom-width: 10px;
+    border-bottom-style: solid;
 }
 
 a.button:link,
 a.button:visited {
-    color:#BFB48F;
     text-decoration: none;
 }
+
 a.button:hover,
 a.button:active {
-    border-top-color: #BFB48F;
+    border-top-color: #FF533c;
     border-top-width:medium;
     border-top-style: solid;
     border-bottom-color: #BFB48F;
@@ -130,19 +110,23 @@ a.navbar:visited {
     height: 100%;
     text-align: center;
     text-decoration: none;
-    border-top-color: #6a4d71;
-    color:#6a4d71;
+    border-top-color: #FF533c;
+    color:#FF533c;
     padding-top: 6px;
     padding-bottom: 6px;
 
-    padding-right: 5px;
-    padding-left: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 24px;
 }
 a.navbar:hover,
 a.navbar:active {
-    border-top-color: #6a4d71;
+    border-top-color: #FF533c;
     border-top-width: thick;
     border-top-style: solid;
+    border-bottom-color: #FF533c;
+    border-bottom-width: thick;
+    border-bottom-style: solid;
     padding-top: 0px;
     
 }
@@ -153,23 +137,25 @@ a.navbar:active {
     max-width: 1000px;
     height 100%;
     margin: 0 auto;
-    background:#BFB48F;
+    color:#FF533c;
 }
 #home.content {
     text-align: center;
 }
 .storyboard {
-    width:calc(100% - 245px);
+    width:76%;
+    #width:calc(100% - 245px);
     float:left;
     margin-top: 1px;
 }
 .storybox {
     margin-bottom: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-    min-height: 300px;
-    background-color:#564E58;
-    color:#BFB48F;
+    padding-left: 30px;
+    padding-right: 30px;
+    min-height: 390px;
+    line-height: 150%;
+    width:100%;
+    background-color:#0F1626;
 }
 #first_box {
     margin-top: -22px;
@@ -178,16 +164,35 @@ a.navbar:active {
 #storybox p {
     font-weight: bold;
 }
+
+#m_resume_container {
+    width:100%;
+    min-height: 390px;
+   ##margin-right: -30px;
+    background-color:#0F1626;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+}
+
+#div_resume_container {
+    
+    #margin-right:-32.5%;
+    margin-bottom: 10px;
+
+}
+
 .stats{
+    font-weight: bold;
     float: right;
     margin-bottom: 15px;
     padding-right: 15px;
     padding-left: 15px;
     padding-top: 15px;
-    height: 500px;
-    width:200px;
-    background-color:#564E58;
-    color:#BFB48F;
+    padding-bottom: 15px;
+    #height: 500px;
+    width:22%;
+    background-color:#0F1626;
     align-items: center;   
     text-align: center;
 }
@@ -195,6 +200,84 @@ a.navbar:active {
     width: 100%;
     margin: 0 auto;
 }
+/* Make sure that padding behaves as expected */
+* {box-sizing:border-box}
+
+/* Container for skill bars */
+.container {
+    width: 100%; /* Full width */
+    background-color: #ddd; /* Grey background */
+}
+
+.skills {
+    text-align: right; /* Right-align text */
+    padding-right: 20px; /* Add some right padding */
+    margin-bottom:10px;
+    line-height: 40px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
+    color: white; /* White text color */
+}
+
+.html {float:left; width: 70%; background-color: #FF533c;}
+.css {float:left;width: 70%; background-color: #FF533c;} 
+.js {float:left;width: 65%; background-color: #FF533c;} 
+.cpp {float:left;width: 90%; background-color: #FF533c;} 
+.git {float:left;width: 70%; background-color: #FF533c;} 
+.python {float:left;width: 80%; background-color: #FF533c;}
+.spanish {float:left;width: 50%; background-color: #FF533c;}
+
+.skill_html_filler {
+    padding-right: 10px; /* Add some right padding */
+    line-height: 40px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
+    padding-bottom: 40px;
+    width:30%;
+    background-color: #BFB48F;
+    float: right;
+}
+
+.skill_css_filler {
+    padding-right: 10px; /* Add some right padding */
+    line-height: 40px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
+    padding-bottom: 40px;
+    width:30%;
+    background-color: #BFB48F;
+    float: right;
+}
+
+.skill_cpp_filler {
+    padding-right: 10px; /* Add some right padding */
+    line-height: 40px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
+    padding-bottom: 40px;
+    width:10%;
+    background-color: #BFB48F;
+    float: right;
+}
+
+.skill_git_filler {
+    padding-right: 10px; /* Add some right padding */
+    line-height: 40px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
+    padding-bottom: 40px;
+    width:30%;
+    background-color: #BFB48F;
+    float: right;
+}
+.skill_python_filler {
+    padding-right: 10px; /* Add some right padding */
+    line-height: 40px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
+    padding-bottom: 40px;
+    width:20%;
+    background-color: #BFB48F;
+    float: right;
+}
+
+.skill_spanish_filler {
+    padding-right: 10px; /* Add some right padding */
+    line-height: 40px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
+    padding-bottom: 40px;
+    width:50%;
+    background-color: #BFB48F;
+    float: right;
+}
+
 #categories {
     font-size: 20px;
     font-weight: bolder;
@@ -211,8 +294,8 @@ a.navbar:active {
     padding-left: 15px;
     padding-right: 15px;
     min-height: 300px;
-    background-color:#564E58;
-    color:#BFB48F;
+    background-color:#0F1626;
+    color:#FF533c;
 }
 .project img {
     width: calc(100% - 300px);
@@ -243,8 +326,8 @@ a.navbar:active {
     min-width: 520px;
 
     min-height: 140px;
-    background-color:#564E58;
-    color:#BFB48F;
+    background-color:#0F1626;
+    color:#FF533c;
 }
 .photo img {
     float:none;
