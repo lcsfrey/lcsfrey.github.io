@@ -19,7 +19,7 @@ body {
 }
 
 p {
-    text-indent: 500px;
+    text-indent: 50px;
 }
 
 .bg { 
@@ -41,8 +41,10 @@ p {
     color: #3453ff;
     width: 50%;
     margin: 0 auto;
+    margin-bottom: 60px;
     left: 50%;
     right:50%;
+    
 }
 
 header strong {
@@ -68,7 +70,7 @@ header strong {
     padding-bottom: 90px;
     padding-top: 30px;
     margin-bottom: 15px;;
-    text-align: center;
+    text-align: calc(center + 50px);
     background: #0F1626;
     left: 50%;
     right:50%;
@@ -89,15 +91,14 @@ header strong {
     margin-top: 15px;
     margin-bottom: 15px;
     text-align: center;
-    background: #0F1626;
+    background-color:rgba(15, 22, 38, .7);
     font-weight: bold;
-     color: #FF533c;
+
+    z-index:10;
+    
 }
 
 .genrebutton {
-    width: 50%;
-}
-.genrebutton2 {
     width: 50%;
 }
 
@@ -109,26 +110,17 @@ a.genrebutton:hover, a.genrebutton:active {
     border-left-style: none;
     border-right-style: none;
     text-decoration: none;
-    border-top-color: #FF533c;
     border-top-width: 10px;;
     border-top-style: solid;
-    border-bottom-color: #FF533c;
     border-bottom-width: 10px;
     border-bottom-style: solid;
-    color: #FF533c;
-}
-
-a.button:link,
-a.button:visited {
-    text-decoration: none;
-    #color: #FF533c;
 }
 
 a.button:hover,
 a.button:active {
     color: #FF533c;
     #border-top-color: #FF533c;
-    bord er-top-width:medium;
+    border-top-width:medium;
     border-top-style: solid;
     #border-bottom-color: #BFB48F;
     border-bottom-width: medium;
@@ -156,8 +148,7 @@ a.navbar:active {
     #border-bottom-color: #FF533c;
     border-bottom-width: thick;
     border-bottom-style: solid;
-    padding-top: 0px;
-    
+    padding-top: 0px; 
 }
 .content {
     font-size: 16px;
@@ -165,6 +156,8 @@ a.navbar:active {
     max-width: 1000px;
     height 100%;
     margin: 0 auto;
+    color:white;
+    
 
 }
 #home.content {
@@ -175,6 +168,7 @@ a.navbar:active {
     #width:calc(100% - 245px);
     float:left;
     margin-top: 1px;
+    
 }
 .storybox {
     margin-bottom: 15px;
@@ -183,7 +177,7 @@ a.navbar:active {
     min-height: 390px;
     line-height: 150%;
     width:100%;
-    background-color:#0F1626;
+    background-color:rgba(15, 22, 38, .7);
 }
 #first_box {
     margin-top: -22px;
@@ -191,16 +185,6 @@ a.navbar:active {
 
 #storybox p {
     font-weight: bold;
-}
-
-#m_resume_container {
-    width:100%;
-    min-height: 390px;
-   ##margin-right: -30px;
-    background-color:#0F1626;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
 }
 
 #div_resume_container {
@@ -220,17 +204,32 @@ a.navbar:active {
     padding-bottom: 15px;
     #height: 500px;
     width:22%;
-    background-color:#0F1626;
     align-items: center;   
     text-align: center;
+    background-color:rgba(15, 22, 38, .7);
 }
 .stats img {
     width: 100%;
     margin: 0 auto;
 }
 
-.stats a {
+a.stats {
     text-decoration: none;
+}
+
+a.stats_link:link,
+a.stats_link:visited {
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 30px;
+    color:white;
+}
+a.stats_link:hover,
+a.stats_link:active {
+    padding-top: 0px; 
 }
 
 /* Make sure that padding behaves as expected */
@@ -239,7 +238,6 @@ a.navbar:active {
 /* Container for skill bars */
 .container {
     width: 100%; /* Full width */
-    background-color: #ddd; /* Grey background */
 }
 
 .skills {
@@ -250,13 +248,13 @@ a.navbar:active {
     color: white; /* White text color */
 }
 
-.html {float:left; width: 70%; background-color: #FF533c;}
-.css {float:left;width: 70%; background-color: #FF533c;} 
-.js {float:left;width: 65%; background-color: #FF533c;} 
-.cpp {float:left;width: 90%; background-color: #FF533c;} 
-.git {float:left;width: 70%; background-color: #FF533c;} 
-.python {float:left;width: 80%; background-color: #FF533c;}
-.spanish {float:left;width: 50%; background-color: #FF533c;}
+.html {float:left; width: 70%; background-color: #FF533c; margin-top:5px;}
+.css {float:left;width: 70%; background-color: #FF533c; margin-top:5px;} 
+.js {float:left;width: 65%; background-color: #FF533c; margin-top:5px;} 
+.cpp {float:left;width: 90%; background-color: #FF533c; margin-top:5px;} 
+.git {float:left;width: 70%; background-color: #FF533c; margin-top:5px;} 
+.python {float:left;width: 80%; background-color: #FF533c; margin-top:5px;}
+.spanish {float:left;width: 50%; background-color: #FF533c; margin-top:5px;}
 
 .skill_html_filler {
     padding-right: 10px; /* Add some right padding */
@@ -266,6 +264,7 @@ a.navbar:active {
     background-color: #BFB48F;
     float: right;
     margin-bottom:17px;
+    margin-top:5px;
 }
 
 .skill_css_filler {
@@ -276,6 +275,7 @@ a.navbar:active {
     background-color: #BFB48F;
     float: right;
     margin-bottom:17px;
+        margin-top:5px;
 }
 
 .skill_cpp_filler {
@@ -286,6 +286,7 @@ a.navbar:active {
     background-color: #BFB48F;
     float: right;
     margin-bottom:17px;
+        margin-top:5px;
 }
 
 .skill_git_filler {
@@ -296,12 +297,14 @@ a.navbar:active {
     background-color: #BFB48F;
     float: right;
     margin-bottom:17px;
+        margin-top:5px;
 }
 .skill_python_filler {
     padding-right: 10px; /* Add some right padding */
     line-height: 40px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
     padding-bottom: 40px;
     width:20%;
+        margin-top:5px;
     background-color: #BFB48F;
     float: right;
     margin-bottom:17px;
@@ -315,6 +318,7 @@ a.navbar:active {
     background-color: #BFB48F;
     float: right;
     margin-bottom:17px;
+        margin-top:5px;
 }
 
 #categories {
@@ -327,6 +331,7 @@ a.navbar:active {
 }
 
 .projectboard {
+        background-color:rgba(15, 22, 38, .6);
 }
 
 .project {
@@ -366,7 +371,7 @@ a.navbar:active {
 
     min-height: 140px;
     background-color:#0F1626;
-    color:#FF533c;
+    background-color:rgba(15, 22, 38, .7);
 }
 .photo img {
     float:none;

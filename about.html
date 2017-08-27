@@ -5,8 +5,8 @@
     <title>About Me</title>
 </head>
 <body>
-    <header>
-        <div id="logincontainer">    
+    <div class="bg">
+        <div style="margin: 0 auto;" id="logincontainer">    
             <strong>
                 <a class="navbar" href="index.html">Home</a>
                 <a class="navbar" href="photos.html">Photography</a>
@@ -15,21 +15,7 @@
                 <a class="navbar" href="Resume_Lucas_Frey.pdf">Resume</a>
             </strong>
         </div>
- 
-        <div id="banner">
-            <strong><h1>Lucas Frey</h1></strong>
-            <strong><div style="font-size: 16pt;">Where I'd put a catchy slogan for myself</div></strong>
-        </div> 
-    </header>
-
-
-        <!-- 
-        <?php 
-            include("includes/security.php");
-            include("includes/adminsecurity.php");
-        ?>    
-        -->
-
+        <div class="home_banner">Lucas Frey<div style="margin-top:15px;font-size: 18pt;">Where I'd put a catchy slogan for myself</div></div>
     <div class="content">
         <div class="storyboard">
             <div id="first_box" class="storybox">
@@ -47,7 +33,8 @@
                     <li>Oregon State University</li>
                     <li>Chemeketa Community College</li>
                 </ul>
-            </div>            <div class="storybox">
+            </div>            
+            <div class="storybox">
                 <h1>Hobbies</h1> 
                 <ul> 
                     <li>My physical and mental health are very important to me; My day is always better if I have time to go for a run. </li>
@@ -59,13 +46,13 @@
         </div>
             <div class="stats">
                 <img src="img/Lucas.jpg" alt="Image of me.">
-                <a href="mailto:lcsfrey@gmail.com" target="_top">Email</a>
+                <a class="stats_link" href="mailto:lcsfrey@gmail.com" target="_top">Email</a>
                     lcsfrey@gmail.com<br>
-                <a href="https://github.com/lcsfrey" target="_top">Github</a>
-                    github.com/lcsfrey<br>
-                <a href="https://www.linkedin.com/in/lcsfrey/" id="categories">Linkedin</a>
-                    linkedin.com/in/lcsfrey<br>
-                <a href="https://www.instagram.com/lcsfrey/" id="categories">Instagram</a>
+                <a class="stats_link" href="https://github.com/lcsfrey" target="_top" >Github</a>
+                    github.com/lcsfrey
+                <a class="stats_link" href="https://www.linkedin.com/in/lcsfrey/">Linkedin</a>
+                    linkedin.com/in/lcsfrey
+                <a class="stats_link" href="https://www.instagram.com/lcsfrey/">Instagram</a>
                     instagram.com/lcsfrey
             </div>
             <div class="stats">
@@ -137,11 +124,7 @@
                     </div>
 
             </div>
-        <div style="text-align: center;">
-                <h1>Resume</h1> 
-                    <object class="storybox" id="m_resume_container" 
-                            data="Resume_Lucas_Frey.pdf"></object>
-                </div>
         </div>
+    </div>
 </body>
 </html>
