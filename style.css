@@ -8,121 +8,59 @@ body {
     padding: 0px;
     font-family:monospace;
     background-color:#171719;
-    align-self: center;
-    #margin-left: 2%; 
-    #margin-right: 2%;
-    min-width: 450px;
     color:#3453ff;
-    height:100%;
-    
-    
 }
 
 p {
     text-indent: 50px;
 }
 
-.bg { 
+#bg { 
     /* The image used */
     background-image: url("img/zurich_lake_long_pan.jpg");
 
     /* Full height */
-    height: 100%; 
+    height: 2200px; 
 
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.home_banner {
+#navbar {
+    text-align: center;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    width:100%;
+    min-width : 760px;
+    font-size: 20px;
+}
+
+#home_banner {
     text-align: center;
     font-size: 70px;
     padding-top: 160px;
     color: #3453ff;
-    width: 50%;
-    margin: 0 auto;
+    width: 100%;
     margin-bottom: 60px;
     left: 50%;
     right:50%;
-    
 }
 
-header strong {
-    font-size: 20px;
-}
-
-#logincontainer {
-    text-align: right;
-    padding-top: 13px;
-    padding-bottom: 13px;
-    margin: 0 auto;
-    width:100%;
-    min-width : 500px;
-    margin-top:-1px;
-    #max-width: 1000px;
-    left: 50%;
-    right:50%;
-}
-
-#banner {
-    margin: 0 auto;
-    min-width : 550px;
-    padding-bottom: 90px;
-    padding-top: 30px;
-    margin-bottom: 15px;;
-    text-align: calc(center + 50px);
-    background: #0F1626;
-    left: 50%;
-    right:50%;
+#slogan {
+    margin-top: 20px; 
+    font-size: 22pt;
 }
 
 #banner h1 {
     font-size: 70px;
 }
 
-
-.genrebox {
-    font-size: 20px;
-    margin: 0 auto;
-    min-width : 550px;
-    max-width: 1000px;
-    padding-bottom: 37px;
-    padding-top: 15px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    text-align: center;
-    background-color:rgba(15, 22, 38, .7);
-    font-weight: bold;
-
-    z-index:10;
-    
-}
-
-.genrebutton {
-    width: 50%;
-}
-
-a.genrebutton:hover, a.genrebutton:active {
-    margin-top:-15px;
-    padding-top:5px;
-    padding-bottom:5px;
-    border-style: solid;
-    border-left-style: none;
-    border-right-style: none;
-    text-decoration: none;
-    border-top-width: 10px;;
-    border-top-style: solid;
-    border-bottom-width: 10px;
-    border-bottom-style: solid;
-}
-
 a.button:hover,
 a.button:active {
     color: #FF533c;
-    #border-top-color: #FF533c;
     border-top-width:medium;
     border-top-style: solid;
-    #border-bottom-color: #BFB48F;
     border-bottom-width: medium;
     border-bottom-style: solid;
     text-decoration: none;
@@ -130,9 +68,7 @@ a.button:active {
 a.navbar:link,
 a.navbar:visited {
     height: 100%;
-    #text-align: center;
     text-decoration: none;
-    #border-top-color: #FF533c;
     padding-top: 6px;
     padding-bottom: 6px;
     padding-right: 10px;
@@ -142,71 +78,57 @@ a.navbar:visited {
 }
 a.navbar:hover,
 a.navbar:active {
-    #border-top-color: #FF533c;
     border-top-width: thick;
     border-top-style: solid;
-    #border-bottom-color: #FF533c;
     border-bottom-width: thick;
     border-bottom-style: solid;
     padding-top: 0px; 
 }
-.content {
+#content {
     font-size: 16px;
-    min-width : 500px;
-    max-width: 1000px;
-    height 100%;
+    min-width : 760px;
+    max-width: 1100px;
+    height:1700px;
     margin: 0 auto;
-    color:white;
-    
+    color:white; 
+}
 
-}
-#home.content {
-    text-align: center;
-}
-.storyboard {
-    width:76%;
-    #width:calc(100% - 245px);
+#storyboard {
     float:left;
-    margin-top: 1px;
-    
+    max-width: calc(100% - 320px);
+}
+#statsboard {
+    width:300px;
+    float:right;
 }
 .storybox {
-    margin-bottom: 15px;
+    font-size: 16pt;
     padding-left: 30px;
     padding-right: 30px;
-    min-height: 390px;
+    margin-bottom: 20px;
     line-height: 150%;
-    width:100%;
-    background-color:rgba(15, 22, 38, .7);
-}
-#first_box {
-    margin-top: -22px;
+    overflow: auto;
+    background-color:rgba(15, 22, 38, .75);
 }
 
 #storybox p {
     font-weight: bold;
 }
 
-#div_resume_container {
-    
-    #margin-right:-32.5%;
-    margin-bottom: 10px;
-
-}
-
 .stats{
     font-weight: bold;
-    float: right;
-    margin-bottom: 15px;
-    padding-right: 15px;
-    padding-left: 15px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    #height: 500px;
-    width:22%;
-    align-items: center;   
-    text-align: center;
-    background-color:rgba(15, 22, 38, .7);
+    margin-bottom: 20px;
+    padding: 15px;
+    width:270px;
+    background-color:rgba(15, 22, 38, .75);
+}
+
+.stat_bars {
+    font-weight: bold;
+    padding: 15px;
+    width:270px;
+    height:850px;
+    background-color:rgba(15, 22, 38, .75);
 }
 .stats img {
     width: 100%;
@@ -222,14 +144,10 @@ a.stats_link:visited {
     height: 100%;
     text-align: center;
     text-decoration: none;
-    padding-right: 10px;
-    padding-left: 10px;
-    font-size: 30px;
+    padding-right: 5px;
+    padding-left: 5px;
+    font-size: 20px;
     color:white;
-}
-a.stats_link:hover,
-a.stats_link:active {
-    padding-top: 0px; 
 }
 
 /* Make sure that padding behaves as expected */
@@ -246,6 +164,7 @@ a.stats_link:active {
     margin-bottom:17px;
     line-height: 40px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
     color: white; /* White text color */
+    
 }
 
 .html {float:left; width: 70%; background-color: #FF533c; margin-top:5px;}
@@ -321,18 +240,6 @@ a.stats_link:active {
         margin-top:5px;
 }
 
-#categories {
-    font-size: 20px;
-    font-weight: bolder;
-    float: left;
-    margin-top: 15px;
-    margin-right: 5px;
-    width:100%;
-}
-
-.projectboard {
-        background-color:rgba(15, 22, 38, .6);
-}
 
 .project {
     padding-left: 15px;
@@ -344,48 +251,38 @@ a.stats_link:active {
 .project img {
     width: calc(100% - 300px);
 }
-.project h1{
-    padding:0px;
-    padding-top:15px;
-    margin-bottom:10px;
-}
+
 .storybox h1{
-    padding:0px;
-    padding-top:15px;
-    margin-bottom:10px;
+    margin-top:20px;
+    margin-bottom:20px;
 }
 
-#first_box_project{
-    margin-top:-6px;
+#imageboard_wrapper {
+    overflow: hidden;
+    height: 100%;
+}
+#imageboard {
+    overflow: scroll;
 }
 
-.imageboard h1{
-    padding:0px;
-    margin: 0px;
-    margin-bottom:10px;
-}
 .photo {
-    padding: 15px;
-    margin-bottom: 15px;
-    min-width: 520px;
-
-    min-height: 140px;
+    padding: 10px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    min-width: 400px;
+    min-height: 120px;
     background-color:#0F1626;
-    background-color:rgba(15, 22, 38, .7);
-}
-.photo img {
-    float:none;
-    width: 32.5%;
-    min-height: 140px;
-    margin-bottom: -5px;
+    background-color:rgba(15, 22, 38, .75);
 }
 
 #multiple {
-    padding-bottom: 15px;
+    width: 32.7%;
 }
 
 #pan{
     width:100%;
-    padding-bottom: 15px;
 }
 
+.hidden {
+    display: none;
+}
