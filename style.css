@@ -24,9 +24,11 @@ p {
     height: 2100px; 
 
     /* Center and scale the image nicely */
-    background-position: center;
+    background-position: calc(50% + 10px);
     background-repeat: no-repeat;
     overflow-y: hidden;
+    position: relative;
+    overflow-x:hidden;
 }
 
 #navbar {
@@ -40,22 +42,30 @@ p {
 #home_banner {
     text-align: center;
     font-size: 70px;
-    padding-top: 40px;
+    padding-top: 20px;
     color: #3453ff;
-    width: 100%;
     margin-bottom: 20px;
-    left: 50%;
-    right:50%;
+}
+
+
+#home_description {
+    font-size: calc(12px + .2em);
+    width: 420px;
+    margin: 0 auto;
+    margin-top: 45px; 
+    text-align: center;
+    font-size: 22pt;
 }
 
 #slogan {
-    margin-top: 20px; 
+    margin-top: 45px; 
     font-size: 22pt;
 }
 
 #banner h1 {
     font-size: 70px;
 }
+
 
 a.navbar:link,
 a.navbar:visited {
@@ -246,4 +256,13 @@ a.stats_link:visited {
     padding-bottom: 15px;
     min-width: 300px;
     height: 100%;
+}
+
+
+#home_image {
+    position: absolute;
+    margin-left:300px;
+    top: 100px; 
+    width: 200px; 
+    border-radius: 50%;
 }
