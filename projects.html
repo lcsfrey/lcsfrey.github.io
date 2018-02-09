@@ -10,7 +10,8 @@
             <a class="navbar" href="index.html">Home</a>
             <a class="navbar" href="projects.html">Projects</a>
             <a class="navbar" href="photos.html">Photography</a>
-            <a class="navbar" href="about.html">About Me</a>             <a class="navbar" href="Resume_2018.pdf">Resume</a>
+            <a class="navbar" href="about.html">About Me</a>             
+            <a class="navbar" href="Resume_2018.pdf">Resume</a>
         </div>
         <div id="home_banner">
             Lucas Frey<br>
@@ -21,37 +22,54 @@
         <div id="content">
             <div id="imageboard">
                 <div class="project">
-                    <div class="project_image"><img src="r_img/proj_graph_plot_1.png" alt="Image of graph plot."></div>
-                    <h1>Graph Plot</h1>
-                    This began as a team project for my analysis of algorithms class to approximate the Traveling Salesman Path through a complete graph. I realized it would be easier to verify our solutions were correct if we could visualize it, but rather than use an existing graph library and GUI, I decided to take a shot at making my own. Since then I have continued development of this project, adding genetic and multithreaded approximation algorithms, and further improving documention and readability.
-                    <div class="project_tools">
-                    Languages/Frameworks/Tools: C++, qcustomplot, Qt Creator
+                    <img class="project_image" src="r_img/proj_graph_plot_1.png" alt="Image of graph plot.">
+                    <div class="project_details">
+                        <h1>Graph Plot</h1>
+                        This began as a team project for my analysis of algorithms class to approximate the Traveling Salesman Path through a complete graph. I realized it would be easier to verify our solutions were correct if we could visualize it, but rather than use an existing graph library and GUI, I decided to take a shot at making my own. Since then I have continued development of this project, adding genetic and multithreaded approximation algorithms, and further improving documention and readability.<br> <br>
+                            Languages/Frameworks/Tools: C++, qcustomplot, Qt Creator <br><br>
+                        <a class="project_link" href="https://github.com/lcsfrey/TSP_Algorithms">Link to Github repository</a><br>
                     </div>
+                    <div style="clear:both;"></div>
                 </div>
                 
                 <div class="project">
-                    <div class="project_image"><img src="r_img/proj_graph_reader.png" alt="Image of graph reader."></div>
-                    <h1>Graph Reader</h1>
-                    <div class="project_tools">
-                    Languages/Frameworks/Tools: Python 3.6, C++, OpenCV, PyBind11, Pycharm 
+                    <img class="project_image" src="r_img/proj_graph_reader.png" alt="Image of graph reader.">
+                    <div class="project_details">
+                        <h1>Graph Reader</h1>
+                        This Python script was designed to read dots drawn on paper and approximate the shortest Hamiltonian path between all the nodes. (e.g. the Traveling Salesman Problem) The algorithm first finds the edges of the paper, reads in all nodes contained within the paper, approximates the path, and draws the resulting path to the screen in real time. The algorithm utilizes C++ code from the project above to compute the Traveling Salesman Path, which I created Python bindings for using PyBind11. <br> <br> 
+                        Languages/Frameworks/Tools: Python 3.6, C++, OpenCV, PyBind11, Pycharm <br> <br>
+                            <a style="padding-bottom:25px;" class="project_link" href="https://www.youtube.com/watch?v=la00IYMzoyQ">
+                            Link to video demonstration</a><br>   
+                            <a class="project_link" href="https://github.com/lcsfrey/openCV_modules">
+                            Link to Github repository</a><br>
+                            
                     </div>
+                    <div style="clear:both;"></div>
                 </div>
                 
                 <div class="project">
-                    <div class="project_image"><img src="r_img/proj_aces_up.PNG" alt="Image of aces up game."></div>
+                    <img class="project_image" src="r_img/proj_aces_up.PNG" alt="Image of aces up game.">
                     <h1>Aces Up Game</h1>
-                    Mobile/Desktop Web Application 
-                    <div class="project_tools">
-                    Languages/Frameworks/Tools: Java, Ninja Web Framework, IntelliJ
+                    <div class="project_details">
+                        This Mobile/Desktop Web Application was developed during my software engineering class. Myself and three other students used an Agile development methedology to design, build, and test over several two-week long sprints. The game is available to play here. <br> <br>
+                            Languages/Frameworks/Tools: Java, Ninja Web Framework, IntelliJ <br><br>
+                            <a class="project_link" style="padding-bottom:25px;" href="https://aceuposu.herokuapp.com/">
+                                Link to Game</a><br>
+                            <a class="project_link" href="https://github.com/lcsfrey/Aces-Up">Link to Github repository</a><br>
                     </div>
+                    <div style="clear:both;"></div>
                 </div>
 
                 <div class="project">
-                    <div class="project_image"><img src="r_img/proj_security_camera.png" alt="Image of security camera."></div>
-                    <h1>Security Camera</h1>
-                    <div class="project_tools">
-                    Languages/Frameworks/Tools: Python 3.6, OpenCV, PyCharm
+                    <img class="project_image" src="r_img/proj_security_camera.png" alt="Image of security camera.">
+                    <div class="project_details">
+                        <h1>Security Camera</h1>
+                        Python script which reads in webcam input and notifies the user when motion has been detected. The threshold for level of motion can be adjusted to account for possible camera vibration or false positive movement such as the bustling of treetops in the wind. Optionally, all motion over the course of the process' lifetime can be written out to a file.<br><br>
+                        Languages/Frameworks/Tools: Python 3.6, OpenCV, PyCharm<br>
+                        <a class="project_link" href="https://github.com/lcsfrey/openCV_modules">
+                            Link to Github repository</a>
                     </div>
+                    <div style="clear:both;"></div>
                 </div>
             </div>
     </div>
