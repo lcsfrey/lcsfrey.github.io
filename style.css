@@ -1,9 +1,15 @@
-
-@media only screen and (min-width: 611px) {
+/* only larger screens */
+@media only screen and (min-width: 650px) {
+    nav {
+        min-width: 760px;
+    }
     .stats{
         margin-right:20px;
         float:left;
         background-color:rgba(15, 22, 38, .8);
+    }
+    #storyboard {
+        min-width: 700px; 
     }
     .storybox {
         width:100%;
@@ -11,13 +17,22 @@
     #story {
         width:calc(100% - 320px);
     }
+    .project_details {
+        width:calc(100% - 330px);
+    }
+    #education {
+        margin-bottom: 370px;
+    }
 }
-@media only screen and (max-width: 610px){
-    html {
-        width:800px;
+
+/* only small screens */
+@media only screen and (max-width: 649px){
+    nav {
+        min-width : 500px;
     }
     #storyboard {
         text-align: center; 
+        min-width: 400px; 
     }
     .project{
         text-align: left;
@@ -25,25 +40,16 @@
         display:inline-block;
     }
     .storybox {
-        display:inline-block;
-        width:90%;
-        width:400px;
+        margin-left:15px;
+        margin-right:15px;
     }
-    .stats{
-        font-weight: bold;
-        margin-bottom: 20px;
-        padding: 15px;
-        height:550px;
-        width:300px;
-        margin-right:0px;
-        float:none;
-        background-color:rgba(15, 22, 38, .8);   
-    }
+
 }
 
 html {
     height: 1600px;
     width:100%;
+    min-width: 400px;
 }
 
 body {
@@ -71,39 +77,14 @@ p {
     overflow-x:hidden;
 }
 
+/* navbar */
 nav {
     text-align: center;
     font-weight: bold;
     padding-top: 5px;
     padding-bottom: 10px;
-    min-width : 500px;
+    
 }
-
-#home_banner {
-    text-align: center;
-    font-size: 70px;
-    padding-top: 20px;
-    color: #3453ff;
-    margin-bottom: 20px;
-}
-
-
-#home_description {
-    width: 420px;
-    margin: 0 auto;
-    margin-top: 45px; 
-    font-size: 22pt;
-}
-
-#slogan {
-    margin-top: 45px; 
-    font-size: 22pt;
-}
-
-#banner h1 {
-    font-size: 70px;
-}
-
 
 nav a:link,
 nav a:visited {
@@ -126,16 +107,49 @@ nav a:active {
     padding-top: 0px; 
 }
 
+/* home page */
+#home_image {
+    position: absolute;
+    margin-left:300px;
+    top: 100px; 
+    width: 200px; 
+    border-radius: 50%;
+}
+
+#home_banner {
+    text-align: center;
+    font-size: 70px;
+    padding-top: 20px;
+    color: #3453ff;
+    margin-bottom: 20px;
+    
+}
+#banner h1 {
+    font-size: 70px;
+}
+
+#slogan {
+    margin-top: 45px; 
+    font-size: 22pt;
+}
+
+#home_description {
+    width: 420px;
+    margin: 0 auto;
+    margin-top: 45px; 
+    font-size: 22pt;
+}
 
 #content {
     position:relative;
     font-size: 15px;
-    min-width: 330px;
-    width: calc( 100vw );
+    min-width: 360px;
+    width: 100%;
     max-width: 850px;
     height:1700px;
     color:white; 
     margin:0 auto;
+    text-align: center;
 }
 
 #content h1 {
@@ -144,22 +158,29 @@ nav a:active {
     padding-bottom: 10px;
 }
 
-
-
+/* About Me */
 .storybox {
     padding-left: 15px;
     padding-right: 15px;
     margin-bottom: 20px;
     line-height: 150%;
     overflow: hidden;
-    min-width: 300px;
+    text-align: left;
     background-color:rgba(15, 22, 38, .8);
+}
+
+.storybox h1{
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+#story_stat_div {
+    width:100%;
+    margin: 0 auto;
 }
 
 #story {
     height:550px;
-    min-width: 300px;
-        text-align: left;
 }
 
 .stats{
@@ -169,9 +190,24 @@ nav a:active {
     height:550px;
     width:300px;
     background-color:rgba(15, 22, 38, .8);
-    display:inline-block;
-    
+    display:inline-block;    
 }
+
+#icons {
+    padding-right:10%;
+    padding-left: 10%;
+    width: 10px;
+    text-align: center;
+    float:left;
+}
+
+#links {
+    width: 70%;
+    float:left;
+    text-align: center;
+}
+
+
 .stats img {
     width: 100%;
 }
@@ -194,6 +230,15 @@ a.stats_link:visited {
     color:white;
 }
 
+ul {
+    margin-left:-20px;
+}
+
+li {
+    margin-left:-0px;
+    margin-bottom: 10px;
+}
+
 /* Make sure that padding behaves as expected */
 * {box-sizing:border-box}
 
@@ -201,8 +246,9 @@ a.stats_link:visited {
     width: 100%; 
 }
 
+/* Projects */
 .project {
-    min-height: 00px;
+    min-height: 0px;
     margin-bottom: 15px;
     background-color:rgba(15, 22, 38, .8);
     line-height: 120%;
@@ -219,68 +265,6 @@ a.stats_link:visited {
     vertical-align: top;
 }
 
-.storybox h1{
-    margin-top:20px;
-    margin-bottom:20px;
-}
-
-#imageboard_wrapper {
-    height: 100%;
-    overflow-y: auto;
-}
-#imageboard_wrapper::-webkit-scrollbar {
-  display: none;
-}
-#imageboard {
-    height: 100%;
-    margin: 0 auto;
-    display:inline-block;
-    text-align:center;
-}
-
-.photo {
-    padding: 10px;
-    padding-top: 0px;
-    margin-bottom: 10px;
-    background-color:rgba(15, 22, 38, .75);
-}
-
-
-#pan{
-    width:100%;
-    margin-bottom: 5px;
-}
-
-.hidden {
-    display: none;
-}
-
-
-
-.multiple {
-    width: calc((100% - 10px)/3);
-    float:left;
-}
-
-#middle {
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-#icons {
-    padding-right:10%;
-    padding-left: 10%;
-    width: 10px;
-    text-align: center;
-    float:left;
-}
-
-#links {
-    width: 70%;
-    float:left;
-    text-align: center;
-}
-
 .project_link {
     color:white;
     line-height: 160%;
@@ -295,63 +279,52 @@ a.stats_link:visited {
     padding-bottom: 15px;
     padding-left: 15px;
     min-width: 300px;
-    width:calc(100% - 330px);
+
     height: 100%;
     padding-right:15px;
     display: inline-block;
     text-align: left;
 }
 
-
-#home_image {
-    position: absolute;
-    margin-left:300px;
-    top: 100px; 
-    width: 200px; 
-    border-radius: 50%;
+/* Photography */
+#imageboard_wrapper {
+    height: 100%;
+    overflow-y: auto;
 }
 
-li {
-    
+#imageboard_wrapper::-webkit-scrollbar {
+  display: none;
 }
 
-ul {
-    
-    margin-left:-30px;
-}
-
-li {
-    margin-left:-5px;
-}
-
-li {
-   margin-bottom: 10px; 
-}
-
-
-
-#storyboard {
-}
-
-#storyboard {
-    
-}
-
-#education {
-    margin-top:360px;
-}
-
-#story_stat_div {
-    width:100%;
+#imageboard {
+    height: 100%;
     margin: 0 auto;
+    display:inline-block;
+    text-align:center;
 }
 
-.scrolling_about_section {
+.photo {
+    padding: 10px;
+    padding-top: 0px;
+    margin-bottom: 10px;
+    background-color:rgba(15, 22, 38, .75);
+}
+
+#pan{
     width:100%;
+    margin-bottom: 5px;
 }
 
-.project_description {
-    min-width: 300px;
+.multiple {
+    width: calc((100% - 10px)/3);
+    float:left;
 }
+
+#middle {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
 
 
