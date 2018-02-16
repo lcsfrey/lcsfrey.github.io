@@ -1,45 +1,44 @@
 
 @media only screen and (min-width: 611px) {
-        .stats{
-    font-weight: bold;
-    margin-bottom: 20px;
-    padding: 15px;
-    height:550px;
-    width:300px;
-    margin-right:20px;
-    float:left;
-    background-color:rgba(15, 22, 38, .8);
-    
-}
+    .stats{
+        margin-right:20px;
+        float:left;
+        background-color:rgba(15, 22, 38, .8);
+    }
+    .storybox {
+        width:100%;
+    }
+    #story {
+        width:calc(100% - 320px);
+    }
 }
 @media only screen and (max-width: 610px){
     html {
         width:800px;
     }
     #storyboard {
-        text-align: center;
+        text-align: center; 
     }
-  .project{
-    text-align: left;
-    width:300px;
-    display:inline-block;
-  }
-    #story {
-    height:550px;
-    width:300px;
+    .project{
+        text-align: left;
+        width:400px;
         display:inline-block;
     }
+    .storybox {
+        display:inline-block;
+        width:90%;
+        width:400px;
+    }
     .stats{
-    font-weight: bold;
-    margin-bottom: 20px;
-    padding: 15px;
-    height:550px;
-    width:300px;
-    margin-right:0px;
-    float:none;
-    background-color:rgba(15, 22, 38, .8);
-    
-}
+        font-weight: bold;
+        margin-bottom: 20px;
+        padding: 15px;
+        height:550px;
+        width:300px;
+        margin-right:0px;
+        float:none;
+        background-color:rgba(15, 22, 38, .8);   
+    }
 }
 
 html {
@@ -64,12 +63,11 @@ p {
     background-image: url("img/zurich_lake_long_pan.jpg");
 
     /* Full height */
-    height: 2100px; 
+    height: 2200px; 
 
     /* Center and scale the image nicely */
-    background-position: calc(50% + 10px);
+    background-position: calc(50% + 10px) -460px;
     background-repeat: no-repeat;
-    position: relative;
     overflow-x:hidden;
 }
 
@@ -156,12 +154,10 @@ nav a:active {
     overflow: hidden;
     min-width: 300px;
     background-color:rgba(15, 22, 38, .8);
-    
 }
 
 #story {
     height:550px;
-    width:calc(100% - 320px);
     min-width: 300px;
         text-align: left;
 }
@@ -172,7 +168,6 @@ nav a:active {
     padding: 15px;
     height:550px;
     width:300px;
-    margin-right:20px;
     background-color:rgba(15, 22, 38, .8);
     display:inline-block;
     
@@ -343,8 +338,6 @@ li {
 }
 
 #education {
-    float:right;
-    width:100%;
     margin-top:360px;
 }
 
