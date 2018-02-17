@@ -3,6 +3,7 @@
     nav {
         min-width: 760px;
     }
+    
     nav a:link,
     nav a:visited {
         font-size: 31px;
@@ -23,6 +24,7 @@
     }
     #story {
         width:calc(100% - 320px);
+        height: 520px;
     }
 
     #education {
@@ -64,20 +66,25 @@
 }
 /* only small screens */
 @media only screen and (max-width: 650px){
-    nav a:link,
-    nav a:visited {
-        font-size: 31px;
-    }
+
+    
     #home_banner {
         margin-top: 10px;
         font-size: 70px;
     }
+    
+    nav a:link,
+    nav a:visited {
+        font-size: 31px;
+    }
+    
     #storyboard {
         text-align: center; 
         width:100%; 
         min-width:250px;  
     }
-    .project{
+    
+    .project {
         text-align: left;
         width:100%;
         display:inline-block;
@@ -86,14 +93,16 @@
         font-size:18px;
         padding-bottom:25px;
     }
+    
     .storybox {
-        
         margin-left:15px;
         margin-right:15px;
     }
+    
     #story {
         margin-top:00px
     }
+    
     .multiple {
         width: calc((100% - 4px)/3);
         float:left;
@@ -103,29 +112,22 @@
         margin-left: 2px;
         margin-right: 2px;
     }
+    
     .project_image {
         padding: 15px;
         max-width:300px;
         margin:0 auto;
     }
-    #project h1 {
-    margin: 0px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-size:40px;
-}
     
-}
-
-@media only screen and (max-width: 650px){
+    .project h1 {
+        margin: 0px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size:39px;
+    }
+    
     .stats {
         width:300px;
-    }
-    .project h1 {
-    margin: 0px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-size:39px;
     }
     
 }
@@ -135,16 +137,18 @@
     nav {
         min-width : 280px;
     }
+    
     #home_banner {
         margin-top: 50px;
         font-size: 59px;
     }
-        #imageboard h1 {
-    margin: 0px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-size:31px;
-}
+    
+    #imageboard h1 {
+        margin: 0px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size:31px;
+    }
 }
 
 /* mobile css */
@@ -154,11 +158,8 @@
     }
 
     #imageboard h1 {
-    margin: 0px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-size:25px;
-}
+        font-size:25px;
+    }
 }
 
 html {
@@ -290,10 +291,6 @@ nav a:active {
     margin: 0 auto;
 }
 
-#story {
-    height:520px;
-}
-
 .stats{
     font-weight: bold;
     margin-bottom: 20px;
@@ -367,7 +364,7 @@ li {
     background-color:rgba(15, 22, 38, .8);
     line-height: 130%;
     position: relative;
-    font-weight: 18px;
+
 }
 
 .project_image {
