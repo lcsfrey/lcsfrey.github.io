@@ -19,9 +19,6 @@
     #storyboard {
         min-width: 700px; 
     }
-    #storyboard {
-        min-width: 700px; 
-    }
     .storybox {
         width:100%;
     }
@@ -65,12 +62,6 @@
 @media only screen and (max-width: 650px) and (min-width: 500px){
     nav {
         min-width : 500px;
-    }
-    .project_details {
-        width:calc(100% - 330px);
-    }
-    #education {
-        margin-bottom: 370px;
     }
 }
 /* only small screens */
@@ -169,13 +160,11 @@
     #imageboard h1 {
         font-size:25px;
     }
-
 }
 
 html {
     height: 1600px;
     width:100%;
-    min-width: 400px;
 }
 
 body {
