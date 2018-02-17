@@ -1,9 +1,22 @@
-
-@media only screen and (min-width: 611px) {
+/* only larger screens */
+@media only screen and (min-width: 650px) {
+    nav {
+        min-width: 760px;
+    }
+    nav a:link,
+    nav a:visited {
+        font-size: 31px;
+    }
+    
     .stats{
         margin-right:20px;
         float:left;
         background-color:rgba(15, 22, 38, .8);
+        width:300px;
+    }
+    
+    #storyboard {
+        min-width: 700px; 
     }
     .storybox {
         width:100%;
@@ -11,34 +24,141 @@
     #story {
         width:calc(100% - 320px);
     }
+
+    #education {
+        margin-bottom: 390px;
+    }
+    #home_banner {
+        padding-top:30px;
+        font-size: 70px;
+    }
+    
+    .multiple {
+        width: calc((100% - 10px)/3);
+        float:left;
+    }
+
+    #middle {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    #storybox h1 {
+        margin: 0 auto;
+    }
+    .project_image {
+        width:300px;
+        float:left;
+        height:300px;
+    }
+    .project_details {
+        width:calc(100% - 300px);
+        font-size:18px;
+    }
 }
-@media only screen and (max-width: 610px){
-    html {
-        width:800px;
+
+/* only small screens */
+@media only screen and (max-width: 650px) and (min-width: 500px){
+    nav {
+        min-width : 500px;
+    }
+}
+/* only small screens */
+@media only screen and (max-width: 650px){
+    nav a:link,
+    nav a:visited {
+        font-size: 31px;
+    }
+    #home_banner {
+        margin-top: 10px;
+        font-size: 70px;
     }
     #storyboard {
         text-align: center; 
+        width:100%; 
+        min-width:250px;  
     }
     .project{
         text-align: left;
-        width:400px;
+        width:100%;
         display:inline-block;
+        margin: 0 auto;
+        min-width:250px;
+        font-size:18px;
+        padding-bottom:25px;
     }
     .storybox {
-        display:inline-block;
-        width:90%;
-        width:400px;
+        
+        margin-left:15px;
+        margin-right:15px;
     }
-    .stats{
-        font-weight: bold;
-        margin-bottom: 20px;
+    #story {
+        margin-top:00px
+    }
+    .multiple {
+        width: calc((100% - 4px)/3);
+        float:left;
+    }
+
+    #middle {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    .project_image {
         padding: 15px;
-        height:550px;
-        width:300px;
-        margin-right:0px;
-        float:none;
-        background-color:rgba(15, 22, 38, .8);   
+        max-width:300px;
+        margin:0 auto;
     }
+    #project h1 {
+    margin: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size:40px;
+}
+    
+}
+
+@media only screen and (max-width: 650px){
+    .stats {
+        width:300px;
+    }
+    .project h1 {
+    margin: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size:39px;
+    }
+    
+}
+
+/* mobile css */
+@media only screen and (max-width: 520px){
+    nav {
+        min-width : 280px;
+    }
+    #home_banner {
+        margin-top: 50px;
+        font-size: 59px;
+    }
+        #imageboard h1 {
+    margin: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size:31px;
+}
+}
+
+/* mobile css */
+@media only screen and (max-width: 360px){
+    nav {
+        min-width : 280px;
+    }
+
+    #imageboard h1 {
+    margin: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size:25px;
+}
 }
 
 html {
@@ -59,6 +179,7 @@ p {
 }
 
 #bg { 
+    position:relative;
     /* The image used */
     background-image: url("img/zurich_lake_long_pan.jpg");
 
@@ -71,39 +192,14 @@ p {
     overflow-x:hidden;
 }
 
+/* navbar */
 nav {
     text-align: center;
     font-weight: bold;
     padding-top: 5px;
     padding-bottom: 10px;
-    min-width : 500px;
+    
 }
-
-#home_banner {
-    text-align: center;
-    font-size: 70px;
-    padding-top: 20px;
-    color: #3453ff;
-    margin-bottom: 20px;
-}
-
-
-#home_description {
-    width: 420px;
-    margin: 0 auto;
-    margin-top: 45px; 
-    font-size: 22pt;
-}
-
-#slogan {
-    margin-top: 45px; 
-    font-size: 22pt;
-}
-
-#banner h1 {
-    font-size: 70px;
-}
-
 
 nav a:link,
 nav a:visited {
@@ -113,7 +209,7 @@ nav a:visited {
     padding-bottom: 6px;
     padding-right: 10px;
     padding-left: 10px;
-    font-size: 30px;
+
     color: #3453ff;
 }
 
@@ -126,52 +222,106 @@ nav a:active {
     padding-top: 0px; 
 }
 
+/* home page */
+#home_image {
+    position: absolute;
+    margin-left:300px;
+    top: 100px; 
+    width: 200px; 
+    border-radius: 50%;
+}
+
+#home_banner {
+    text-align: center;
+    
+    color: #3453ff;
+    margin-bottom: 20px;
+    
+}
+
+
+#slogan {
+    margin-top: 45px; 
+    font-size: 22pt;
+}
+
+#home_description {
+    width: 420px;
+    margin: 0 auto;
+    margin-top: 45px; 
+    font-size: 22pt;
+}
 
 #content {
     position:relative;
     font-size: 15px;
-    min-width: 330px;
-    width: calc( 100vw );
+    width: 100%;
     max-width: 850px;
     height:1700px;
     color:white; 
     margin:0 auto;
+    text-align: center;
 }
 
-#content h1 {
+#imageboard h1 {
     margin: 0px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
-
-
+/* About Me */
 .storybox {
     padding-left: 15px;
     padding-right: 15px;
     margin-bottom: 20px;
     line-height: 150%;
     overflow: hidden;
-    min-width: 300px;
+    text-align: left;
     background-color:rgba(15, 22, 38, .8);
 }
 
+.storybox h1{
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+#story_stat_div {
+    width:100%;
+    margin: 0 auto;
+}
+
 #story {
-    height:550px;
-    min-width: 300px;
-        text-align: left;
+    height:520px;
 }
 
 .stats{
     font-weight: bold;
     margin-bottom: 20px;
     padding: 15px;
-    height:550px;
-    width:300px;
+    height:520px;
+    
     background-color:rgba(15, 22, 38, .8);
-    display:inline-block;
+    display:inline-block;    
+}
+
+#icons {
+    padding-right:10%;
+    padding-left: 10%;
+    width: 10%;
+    margin-top:10px;
+    text-align: center;
+    display: inline-block;
     
 }
+
+#links {
+    width: 70%;
+    margin-top:10px;
+    display: inline-block;
+    text-align: center;
+}
+
+
 .stats img {
     width: 100%;
 }
@@ -191,7 +341,17 @@ a.stats_link:link,
 a.stats_link:visited {
     text-decoration: none;
     font-size: 30px;
+    margin-top:20px;
     color:white;
+}
+
+ul {
+    margin-left:-20px;
+}
+
+li {
+    margin-left:-0px;
+    margin-bottom: 10px;
 }
 
 /* Make sure that padding behaves as expected */
@@ -201,84 +361,18 @@ a.stats_link:visited {
     width: 100%; 
 }
 
+/* Projects */
 .project {
-    min-height: 00px;
     margin-bottom: 15px;
     background-color:rgba(15, 22, 38, .8);
-    line-height: 120%;
+    line-height: 130%;
     position: relative;
-    display: inline-block;
+    font-weight: 18px;
 }
 
 .project_image {
     display:inline-block;
-    width:300px;
-    margin-right:0px;
-    height: 300px;
     padding: 15px;
-    vertical-align: top;
-}
-
-.storybox h1{
-    margin-top:20px;
-    margin-bottom:20px;
-}
-
-#imageboard_wrapper {
-    height: 100%;
-    overflow-y: auto;
-}
-#imageboard_wrapper::-webkit-scrollbar {
-  display: none;
-}
-#imageboard {
-    height: 100%;
-    margin: 0 auto;
-    display:inline-block;
-    text-align:center;
-}
-
-.photo {
-    padding: 10px;
-    padding-top: 0px;
-    margin-bottom: 10px;
-    background-color:rgba(15, 22, 38, .75);
-}
-
-
-#pan{
-    width:100%;
-    margin-bottom: 5px;
-}
-
-.hidden {
-    display: none;
-}
-
-
-
-.multiple {
-    width: calc((100% - 10px)/3);
-    float:left;
-}
-
-#middle {
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-#icons {
-    padding-right:10%;
-    padding-left: 10%;
-    width: 10px;
-    text-align: center;
-    float:left;
-}
-
-#links {
-    width: 70%;
-    float:left;
-    text-align: center;
 }
 
 .project_link {
@@ -294,64 +388,42 @@ a.stats_link:visited {
 .project_details {
     padding-bottom: 15px;
     padding-left: 15px;
-    min-width: 300px;
-    width:calc(100% - 330px);
+
     height: 100%;
     padding-right:15px;
     display: inline-block;
     text-align: left;
 }
 
-
-#home_image {
-    position: absolute;
-    margin-left:300px;
-    top: 100px; 
-    width: 200px; 
-    border-radius: 50%;
+/* Photography */
+#imageboard_wrapper {
+    height: 100%;
+    overflow-y: auto;
 }
 
-li {
-    
+#imageboard_wrapper::-webkit-scrollbar {
+  display: none;
 }
 
-ul {
-    
-    margin-left:-30px;
-}
-
-li {
-    margin-left:-5px;
-}
-
-li {
-   margin-bottom: 10px; 
-}
-
-
-
-#storyboard {
-}
-
-#storyboard {
-    
-}
-
-#education {
-    margin-top:360px;
-}
-
-#story_stat_div {
-    width:100%;
+#imageboard {
+    height: 100%;
     margin: 0 auto;
+    display:inline-block;
+    text-align:center;
 }
 
-.scrolling_about_section {
+.photo {
+    padding: 10px;
+    padding-top: 0px;
+    margin-bottom: 10px;
+    background-color:rgba(15, 22, 38, .75);
+}
+
+#pan{
     width:100%;
+    margin-bottom: 5px;
 }
 
-.project_description {
-    min-width: 300px;
-}
+
 
 
