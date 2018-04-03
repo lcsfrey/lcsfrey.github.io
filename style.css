@@ -33,10 +33,11 @@
     #story {
         width:calc(100% - 320px);
         height: 520px;
+        font-size: 17px;
     }
 
     #education {
-        margin-bottom: 390px;
+        margin-bottom: 430px;
     }
     #home_banner {
         padding-top:30px;
