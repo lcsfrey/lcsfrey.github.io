@@ -56,8 +56,10 @@
     #storybox h1 {
         margin: 0 auto;
     }
+    .project {
+        min-width:500px;
+    }
     .project_image {
-        min-width: 30%;
         width:40%;
         max-width: 500px;
         max-height: 500px;
@@ -105,7 +107,6 @@
     
     .project {
         text-align: left;
-        width:100%;
         display:inline-block;
         margin: 0 auto;
         min-width:250px;
@@ -269,6 +270,7 @@ nav a:active {
 #slogan {
     margin-top: 45px; 
     font-size: 22pt;
+
 }
 
 #home_description {
@@ -283,7 +285,7 @@ nav a:active {
     font-size: 15px;
     width: 100%;
     min-width: 200px;
-    max-width: 80%;
+    max-width: 90%;
     color:white; 
     margin:0 auto;
     text-align: center;
@@ -439,7 +441,6 @@ li {
     width:100%;
     margin-bottom: 5px;
 }
-
 
 #about_me_point {
     margin-bottom: 0px;
