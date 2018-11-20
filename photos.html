@@ -1,90 +1,117 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <title>My Photos</title>
 </head>
-<body>
-    <div class="bg">
-        <div style="margin: 0 auto;" id="logincontainer">    
-            <strong>
-                <a class="navbar" href="index.html">Home</a>
-                <a class="navbar" href="photos.html">Photography</a>
-                <a class="navbar" href="projects.html">Projects</a>
-                <a class="navbar" href="about.html">About Me</a> 
-                <a class="navbar" href="Resume_Lucas_Frey.pdf">Resume</a>
-            </strong>
-        </div>
- 
-        <div class="home_banner">Lucas Frey<br><div style="margin-top:15px;font-size: 18pt;">Where I'd put a catchy slogan for myself</div></div>
-            <!-- 
-            <?php 
-                include("includes/security.php");
-                include("includes/adminsecurity.php");
-            ?>    
-            -->
-        <div class="content">
-            <div class="genrebox"> 
-                <a class="genrebutton" style=" float:left;height: 100%;">
-                    <div></div>
-                    Locations
-                </a>
-                <a class="genrebutton" style="float:right; height: 100%"> Food
-                </a>
+<body id="bg">
+    <nav>    
+        <a href="index.html">Home</a> 
+        <a href="projects.html">Projects</a> 
+        <a href="photos.html">Photography</a> 
+        <a href="about.html">About Me</a> 
+        <a href="Resume_2018.pdf">Resume</a>
+    </nav>
+
+    <div id="content">
+        <div id="home_banner">
+            Lucas Frey       
+            <div id="slogan">
+                Student. Developer. Mostly Harmless.
             </div>
-            <div class="imageboard">
+        </div>
+        <div id="imageboard_wrapper">
+            <div id="imageboard">
                 <div class="photo">
                     <h1>Zurich, Switzerland</h1>
-                    <a target="_blank" href="img/zurich_pan.jpg">
-                        <img id="pan" src="r_img/zurich_pan.jpg" alt="Mountain View">
+                    <a style="display:block;" href="img/pano_zurich.jpg">
+                        <img id="pan" src="r_img/zurich_pan.jpg" >
                     </a>
-                    <a target="_blank" href="img/zurich_lake.jpg">
-                        <img id="multiple" src="r_img/zurich_lake.jpg" alt="Mountain View">
-                    </a>
-                    <a target="_blank" href="img/zurich_lake%20(3).jpg">
-                        <img id="multiple"  src="img/zurich_lake%20(3).jpg" alt="Mountain View">
-                    </a>
-                </div>
-                <div class="photo">
-                    <h1>Florence, Italy</h1>
-                    <a target="_blank" href="img/florence-duomo.jpg">
-                        <img src="r_img/florence-duomo.jpg" alt="Mountain View">
-                    </a>
-                </div>
 
+                    <a style="display:block;" href="img/zurich_lake.jpg">       
+                        <img class="multiple"  src="r_img/zurich_lake.jpg">
+                    </a>
+                    <a href="img/zurich_lake_rocks_swans.jpg">
+                        <img class="multiple" id="middle" src="r_img/zurich_lake_rocks.jpg">
+                    </a>
+                    <a style="display:block;" href="img/zurich.jpg">       
+                        <img class="multiple"  src="r_img/zurich.jpg" >
+                    </a>
+
+                    <div style="clear:both;"></div>
+                </div>
                 <div class="photo">
                     <h1>Paris, France</h1>
-                    <a target="_blank" href="img/paris_eifel_pan.jpg">
-                        <img id="multiple"  src="r_img/paris_eifel_pan.jpg" alt="Mountain View">
-                    </a>
-                    <a target="_blank" href="img/paris_monument.jpg">    
-                        <img id="multiple"  src="r_img/paris_monument.jpg" alt="Mountain View">
+                    <a style="display:block;" href="img/pano_paris.jpg">
+                        <img id="pan" src="r_img/pano_paris.jpg">
                     </a>
 
-                    <a target="_blank" href="img/paris_plate.jpg">
-                        <img id="multiple"  src="img/paris_plate.jpg" alt="Mountain View">
+                    <a style="display:block;" target="_blank" href="img/paris_eifel_pan.jpg">
+                        <img  class="multiple"  src="r_img/paris_eifel_pan.jpg" >
                     </a>
-                    <a target="_blank" href="img/paris_ferris.jpg">
-                        <img  id="multiple"  src="img/paris_ferris.jpg" alt="Mountain View">
+                    <a style="display:block;" target="_blank" href="img/paris_monument.jpg">       
+                        <img class="multiple" id="middle" src="r_img/paris_monument.jpg" >
                     </a>
+
+                    <a style="display:block;" target="_blank" href="img/paris_plate.jpg">
+                        <img class="multiple"  src="r_img/paris_plate.jpg" >
+                    </a>
+
+                    <div style="clear:both;"></div>
                 </div>
 
                 <div class="photo">
+                    <h1>Florence, Italy</h1>
+                    <a style="display:block;" target="_blank" href="img/pano_florence.jpg">       
+                        <img id="pan" src="r_img/pano_florence.jpg" >
+                    </a>
+                    <a style="display:block;" target="_blank" href="img/florence_graf.jpg">       
+                        <img class="multiple" src="r_img/florence_graf.jpg" >
+                    </a>
+                    <a style="display:block;" target="_blank" href="img/florence_duomo.jpg">       
+                        <img class="multiple" id="middle" src="r_img/florence_duomo.jpg" >
+                    </a>
+                    <a style="display:block;" target="_blank" href="img/florence_parade.jpg">       
+                        <img class="multiple" src="r_img/florence_parade.jpg" >
+                    </a>
+                    <div style="clear:both;"></div>
+                </div>
+
+                <div class="photo">
+                    <h1>Corvallis, Oregon</h1>
+                    <a style="display:block;" target="_blank" href="img/pano_corvallis.jpg">
+                        <img id="pan" src="r_img/pano_corvallis.jpg" >
+                    </a>
+                    <a style="display:block;" target="_blank" href="img/corvallis_mushroom.jpg">       
+                        <img class="multiple" src="r_img/corvallis_mushroom.jpg" >
+                    </a>
+                    <a style="display:block;" target="_blank" href="img/corvallis_flowers_2.jpg">       
+                        <img class="multiple" id="middle" src="r_img/corvallis_flowers_2.jpg" >
+                    </a>
+                    <a style="display:block;" target="_blank" href="img/corvallis_ducks.jpg">       
+                        <img class="multiple" src="r_img/corvallis_ducks.jpg" >
+                    </a>
+                    <div style="clear:both;"></div>
+                </div>
+                
+                <div class="photo">
                     <h1>Crater Lake, Oregon</h1>
-                    <a target="_blank" href="img/CraterLake_pan.jpg">
-                        <img id="pan"  src="r_img/CraterLake_pan.jpg" alt="Mountain View">
+                    <a style="display:block;" target="_blank" href="img/pano_crater_lake.jpg">
+                        <img id="pan"  src="r_img/pano_crater_lake.jpg" >
+                    </a>
+                    <!--
+                    <a  href="img/paris_ferris.jpg">
+                        <img id="multiple"  src="r_img/CraterLake_1.jpg" >
                     </a>
 
-                    <a target="_blank" href="img/paris_ferris.jpg">
-                        <img id="multiple"  src="r_img/CraterLake_1.jpg" alt="Mountain View">
+                    <a  href="img/CraterLake_squirrel.jpg"> 
+                        <img id="multiple"  src="r_img/CraterLake_squirrel.jpg" >
                     </a>
-
-                    <a target="_blank" href="img/CraterLake_squirrel.jpg"> 
-                        <img id="multiple"  src="r_img/CraterLake_squirrel.jpg" alt="Mountain View">
-                    </a>
+                    -->
                 </div>
             </div>
-    </div>
+        </div>
     </div>
 </body>
 </html>

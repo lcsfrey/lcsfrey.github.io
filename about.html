@@ -1,24 +1,62 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_skills.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <title>About Me</title>
 </head>
-<body>
-    <div class="bg">
-        <div style="margin: 0 auto;" id="logincontainer">    
-            <strong>
-                <a class="navbar" href="index.html">Home</a>
-                <a class="navbar" href="photos.html">Photography</a>
-                <a class="navbar" href="projects.html">Projects</a>
-                <a class="navbar" href="about.html">About Me</a> 
-                <a class="navbar" href="Resume_Lucas_Frey.pdf">Resume</a>
-            </strong>
+<body id="bg">
+    <nav>    
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="photos.html">Photography</a>
+        <a href="about.html">About Me</a> 
+        <a href="Resume_2018.pdf">Resume</a>
+    </nav>
+
+    <div id="content">
+        <div id="home_banner">
+            Lucas Frey       
+            <div id="slogan">
+                Student. Developer. Mostly Harmless.
+            </div>
         </div>
-        <div class="home_banner">Lucas Frey<div style="margin-top:15px;font-size: 18pt;">Where I'd put a catchy slogan for myself</div></div>
-    <div class="content">
-        <div class="storyboard">
-            <div id="first_box" class="storybox">
+        <div id="storyboard">
+            <div class="stats">
+                <img src="img/Lucas.jpg" alt="Image of me.">
+                <div id="icons">
+                    <a class="stats_link" href="mailto:lcsfrey@gmail.com">
+                        <i class="fas fa-envelope"></i> 
+                    </a> <br>
+                    <a class="stats_link" href="https://github.com/lcsfrey">
+                        <i class="fab fa-github"></i> 
+                    </a> <br>
+                    <a class="stats_link" href="https://www.linkedin.com/in/lcsfrey/">
+                       <i class="fab fa-linkedin"></i> 
+                    </a> <br>
+                    <a class="stats_link" href="https://www.instagram.com/lcsfrey/">
+                       <i class="fab fa-instagram"></i> 
+                    </a><br>
+                </div>
+                <div id="links">
+                   <a class="stats_link" href="mailto:lcsfrey@gmail.com">
+                        Email
+                    </a><br>
+                    <a class="stats_link" href="https://github.com/lcsfrey"> 
+                        Github 
+                    </a><br>
+                    <a class="stats_link" href="https://www.linkedin.com/in/lcsfrey/">
+                        LinkedIn
+                    </a><br>
+                    <a class="stats_link" href="https://www.instagram.com/lcsfrey/">
+                        Instagram
+                    </a><br>
+                </div>
+            </div>
+                
+            <div class="storybox" id="story">
                 <h1>My Story</h1>
                 <p>    Highly motivated, polite, hardworking student who can apply himself to a variety of tasks with minimal fuss and enjoys learning new things. I put my all into any problem that is thrown at me but am not afraid to admit when I don't know something.
                 <br>
@@ -27,104 +65,138 @@
                  Looking for internships in the fields of software engineering, computer vision, and machine learning. My goal is to someday help develop technology that is substantially beneficial to humanity. Specifically, I want to work on projects that improve the quality and longevity of life or develop clean energy. For example, I have a lot of interest in technologies such as self-driving cars and machine learning applied to medical diagnostics. I believe these fields have amazing potential to improve our society.
                 </p>  
             </div>
-            <div class="storybox">
-                <h1>Educaiton</h1> 
-                <ul> 
-                    <li>Oregon State University</li>
-                    <li>Chemeketa Community College</li>
-                </ul>
-            </div>            
-            <div class="storybox">
-                <h1>Hobbies</h1> 
-                <ul> 
-                    <li>My physical and mental health are very important to me; My day is always better if I have time to go for a run. </li>
-                    <li>I have a passion for traveling, cooking, and reading.</li>
-                    <li>Science fiction and psychology books are my favorites, but occasionally I will read comedies.</li>
-                </ul>
-            </div>
-    
-        </div>
-            <div class="stats">
-                <img src="img/Lucas.jpg" alt="Image of me.">
-                <a class="stats_link" href="mailto:lcsfrey@gmail.com" target="_top">Email</a>
-                    lcsfrey@gmail.com<br>
-                <a class="stats_link" href="https://github.com/lcsfrey" target="_top" >Github</a>
-                    github.com/lcsfrey
-                <a class="stats_link" href="https://www.linkedin.com/in/lcsfrey/">Linkedin</a>
-                    linkedin.com/in/lcsfrey
-                <a class="stats_link" href="https://www.instagram.com/lcsfrey/">Instagram</a>
-                    instagram.com/lcsfrey
-            </div>
-            <div class="stats">
-                <h1 style="padding-top:-15px;">Skills</h1>
-                
-                    C++
-                    <div class="skill_container">
-                      <div class="skills cpp">90%</div>
-                    </div>
-                    <div class="skill_cpp_filler">
-                    </div>
-                
-                <div style= "margin-top:10px;">Python</div>
-                    <div class="skill_container">
-                        <div class="skills python">80%</div>
-                    </div>
-                    <div class="skill_python_filler">
-                    </div>
-                        
-                <div style= "margin-top:10px;">HTML</div>
-                    <div class="skill_container">
-                        <div class="skills html">70%</div>
-                    </div>
-                    <div class="skill_html_filler">
-                    </div>
-                
-                    CSS
-                    <div class="skill_container">
-                        <div class="skills css">70%</div>
-                    </div>
-                        <div class="skill_container_filler">
-                    </div>
-                    <div class="skill_css_filler">
-                    </div>
-                
-                    <div style= "padding-top:10px;">Git</div>
-                    <div class="skill_container">
-                      <div class="skills git">60%</div>
-                    </div>
-                    <div class="skill_git_filler">
-                    </div>
-                
-                    OpenCV
-                    <div class="skill_container">
-                      <div class="skills css">70%</div>
-                    </div>
-                    <div class="skill_css_filler">
-                    </div>
-                
-                    VS
-                    <div class="skill_container">
-                      <div class="skills css">70%</div>
-                    </div>
-                    <div class="skill_css_filler">
-                    </div>
-                
-                    Spanish
-                    <div class="skill_container">
-                      <div class="skills spanish">50%</div>
-                    </div>
-                    <div class="skill_spanish_filler">
-                    </div>
-                
-                    Cooking
-                    <div class="skill_container">
-                      <div class="skills cpp">90%</div>
-                    </div>
-                    <div class="skill_cpp_filler">
-                    </div>
+            <!--
+                <div class="stat_bars">
+                    <h1 style="padding-top:-15px;">Skills</h1>
 
+                        C++
+                        <div class="skill_container">
+                          <div class="skills cpp">90%</div>
+                        </div>
+                        <div class="skill_cpp_filler">
+                        </div>
+
+                    <div style= "margin-top:10px;">Python</div>
+                        <div class="skill_container">
+                            <div class="skills python">80%</div>
+                        </div>
+                        <div class="skill_python_filler">
+                        </div>
+
+                    <div style= "margin-top:10px;">HTML</div>
+                        <div class="skill_container">
+                            <div class="skills html">70%</div>
+                        </div>
+                        <div class="skill_html_filler">
+                        </div>
+
+                        CSS
+                        <div class="skill_container">
+                            <div class="skills css">70%</div>
+                        </div>
+                            <div class="skill_container_filler">
+                        </div>
+                        <div class="skill_css_filler">
+                        </div>
+
+                        <div style= "padding-top:10px;">Git</div>
+                        <div class="skill_container">
+                          <div class="skills git">60%</div>
+                        </div>
+                        <div class="skill_git_filler">
+                        </div>
+
+                        OpenCV
+                        <div class="skill_container">
+                          <div class="skills css">70%</div>
+                        </div>
+                        <div class="skill_css_filler">
+                        </div>
+
+                        VS
+                        <div class="skill_container">
+                          <div class="skills css">70%</div>
+                        </div>
+                        <div class="skill_css_filler">
+                        </div>
+
+                        Spanish
+                        <div class="skill_container">
+                          <div class="skills spanish">50%</div>
+                        </div>
+                        <div class="skill_spanish_filler">
+                        </div>
+
+                        Cooking
+                        <div class="skill_container">
+                          <div class="skills cpp">90%</div>
+                        </div>
+                        <div class="skill_cpp_filler">
+                        </div>
+                    <div style="clear:both;"></div>
+                </div> -->
+            <div class="scrolling_about_section">
+                <div class="storybox" id="education">
+                    <h1>Education</h1> 
+                    <ul style="font-size: 18px;"> 
+                        <li> <strong>Oregon State University - Bachelor of Science | 2016 - 2019</strong>
+                            <div style="padding-left:10px;">
+                                    <div style="margin-left:10px;">
+                                        <strong>Major:</strong> Computer Science Applied in Artificial Intelligence <br>
+                                        <strong>Minor:</strong> Mathematics <br>
+                                        <strong>Clubs:</strong> 
+                                        Machine Learning/Artificial Intelligence Club <br>
+                                    </div>
+
+                            </div>
+                        </li>
+                        <li>
+                            <strong> Chemeketa Community College  - Associate of Arts | 2015 - 2016 </strong>
+                        </li>
+                    </ul>
+                </div> 
+                <div class="storybox">
+                    <h1>Experience</h1> 
+                    <ul style="font-size: 18px;font-weight: bold;"> 
+                        
+                        Data Science Intern | Lam Research | Fremont, CA | Jun 2018 – Present
+                        <ul>
+                            <li id="about_me_point">Developed DenseNet, Inception, and ResNet variant neural networks for image classification and segmentation </li>
+                            <li id="about_me_point">Achieved 97% pixel accuracy using 6-fold cross-validation and training on only 20 images </li>
+                            <li id="about_me_point">Documented development process, logged all analytical data and maintained file integrity using Git</li> 
+                            <li id="about_me_point">Presented work on convolution neural networks to a multi-disciplinary group of engineers </li>
+                            <li id="about_me_point">Participated in intern poster competition </li>
+                        </ul>
+                    </ul>
+                    <ul style="font-size: 18px;font-weight: bold;"> 
+                        Computer Science Tutor  | Corvallis, OR | October 2017 - June 2018 
+                        <ul> 
+                            <li id="about_me_point">Developed my own curriculum to teach high school student C++, algorithms, and computer science concepts.</li>
+                            <li id="about_me_point">Taught concepts of pointers, stack vs heap, object orientation and data structures</li>
+                        </ul>
+                    </ul>
+   
+                    <ul style="font-size: 18px;"> 
+                    <span style="font-size: 18px;font-weight: bold;"> 
+                        Prep Cook / Dishwasher | Capital Manor Retirement Community <br> July 2013 - June 2018 | Salem, OR <br> </span>
+                    <ul> 
+                        <li id="about_me_point">Worked in multiple team environments serving 400+ residents a day</li>
+                        <li id="about_me_point">Recipient of the Capital Manor Foundation Scholarship</li>
+                    </ul>
+                    </ul>
+                </div> 
+                <div class="storybox">
+                <h1>Hobbies</h1> 
+                <ul style="font-size: 18px;"> 
+                    <li >My physical and mental health are very important to me; My day is always better if I have time to go for a run. </li>
+                    <li>I have a passion for traveling, cooking, and reading. </li>
+                    <li>Science fiction and psychology books are my favorites, but occasionally I will read comedies. </li>
+                    <li>Board games are a good a favorite passtime with friends. <ul><li>Favorite games include: Dominion, Concept, Codenames, and Settlers of Catan.</li></ul> </li>
+                </ul>
+            </div>
             </div>
         </div>
+        
     </div>
 </body>
 </html>
