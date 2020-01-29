@@ -7,7 +7,6 @@
     }
     nav {
         vertical-align: top;
-        min-width: 760px;
     }
     
     nav a:link,
@@ -30,7 +29,7 @@
     }
     #story {
         width:calc(100% - 320px);
-        font-size: 17px;
+        font-size:22px;
     }
 
     #home_banner {
@@ -69,15 +68,6 @@
 }
 
 
-
-/* only small screens */
-@media only screen and (max-width: 650px) and (min-width: 500px){
-    nav a {
-        min-width : 500px;
-    } 
-}
-
-
 /* only small screens */
 @media only screen and (max-width: 650px){
     
@@ -91,28 +81,19 @@
         font-size: 31px;
     }
     
-    #storyboard {
-        text-align: center; 
-        width:100%; 
-        min-width:250px;  
-    }
     
     .project {
         text-align: left;
         display:inline-block;
         margin: 0 auto;
         min-width:250px;
-        font-size:18px;
+        font-size:20px;
         padding-bottom:25px;
     }
     
     .storybox {
         margin-left:15px;
         margin-right:15px;
-    }
-    
-    #story {
-        margin-top:00px
     }
     
     .multiple {
@@ -125,11 +106,13 @@
         margin-right: 2px;
     }
     
+
     .project_image {
+        width:100%;
         padding: 15px;
-        max-width:300px;
         margin:0 auto;
     }
+    
     
     .project h1 {
         margin: 0px;
@@ -137,26 +120,15 @@
         padding-bottom: 15px;
         font-size:39px;
     }
-    
-    .stats {
-        width:300px;
-    }
+
     
 }
 
 /* mobile css */
 @media only screen and (max-width: 520px){
-    nav a:link,
-    nav a:visited {
-        font-size: 23px;
-    }
-    
-    nav {
-        min-width : 280px;
-    }
+
     #home_banner {
         margin-top: 15px;
-        font-size: 59px;
     }
     
     #imageboard h1 {
@@ -168,15 +140,34 @@
 }
 
 /* mobile css */
-@media only screen and (max-width: 360px){
-    nav {
-        min-width : 280px;
+@media only screen and (max-width: 800px){
+    
+    nav a{
+        margin: auto 0;
+    }
+
+    nav a{
+        width: 100%;
+        margin: auto 0;
+        display: inline-block;
     }
     
-    nav a:link,
-    nav a:visited {
-        font-size: 23px;
+    #storyboard {
+        text-align: center; 
+        width:100%; 
+        min-width:250px;  
     }
+    #story {
+        margin-top:0px;
+        font-size:20px;
+    }    
+    .stats {
+        width:300px;
+    }
+}
+
+/* mobile css */
+@media only screen and (max-width: 360px){
     
     #imageboard h1 {
         font-size:25px;
@@ -222,30 +213,32 @@ p {
 nav {
     text-align: center;
     font-weight: bold;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     background-color:#171F32;
 
     vertical-align: top; /* here */
 }
 
+
 nav a:link,
 nav a:visited {
     height: 100%;
     text-decoration: none;
-    padding-right: 5px;
-    padding-left: 5px;
     color:#FF611D;
+    border-top: 3px solid #171F32;
+    border-bottom: 3px solid #171F32;
+
+    padding-left: 5px ;
+    padding-right: 5px ;
 }
 
 nav a:hover,
 nav a:active {
-    border-top-width: thick;
-    border-top-style: solid;
-    border-bottom-width: thick;
-    border-bottom-style: solid;
-    padding-top: 0px; 
+    border-top: 3px solid #FF611D;
+    border-bottom: 3px solid #FF611D;
 }
+
 
 /* home page */
 #home_image {
@@ -260,7 +253,6 @@ nav a:active {
     text-align: center;
     /* color:#3453ff;*//* only larger screens */
     
-
     margin-top: 50%;
     margin-bottom: 50%;
     margin-top: auto;
@@ -289,7 +281,7 @@ nav a:active {
 }
 
 #content {
-    font-size: 15px;
+    font-size:18px;
     width: 100%;
     min-width: 200px;
     max-width: 90%;
