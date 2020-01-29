@@ -1,14 +1,12 @@
 /* only larger screens */
 @media only screen and (min-width: 650px) {
-    #bg { 
-        /* Full height */
-        height: 2200px;
-    }
+
     nav a:link,
     nav a:visited {
         font-size: 31px;
     }
     nav {
+        vertical-align: top;
         min-width: 760px;
     }
     
@@ -20,7 +18,7 @@
     .stats{
         margin-right:20px;
         float:left;
-        background-color:rgba(15, 22, 38, .8);
+        background-color:#171F32;
         width:300px;
     }
     
@@ -32,15 +30,15 @@
     }
     #story {
         width:calc(100% - 320px);
-        height: 520px;
         font-size: 17px;
     }
 
-    #education {
-        margin-bottom: 430px;
-    }
     #home_banner {
-        padding-top:30px;
+        
+        position:relative;
+        text-align: center;
+        border-style: dashed;
+
         font-size: 70px;
     }
     
@@ -61,10 +59,7 @@
     }
     .project_image {
         width:40%;
-        max-width: 500px;
-        max-height: 500px;
         float:left;
-        height:100%;
     }
     .project_details {
         min-width: 30%;
@@ -77,9 +72,6 @@
 
 /* only small screens */
 @media only screen and (max-width: 650px) and (min-width: 500px){
-    #bg { 
-        height: 2200px;
-    }
     nav a {
         min-width : 500px;
     } 
@@ -154,10 +146,6 @@
 
 /* mobile css */
 @media only screen and (max-width: 520px){
-    #bg {
-        height:1250px;
-    }
-    
     nav a:link,
     nav a:visited {
         font-size: 23px;
@@ -165,9 +153,6 @@
     
     nav {
         min-width : 280px;
-    }
-    #content {
-        height: 960px;
     }
     #home_banner {
         margin-top: 15px;
@@ -199,29 +184,38 @@
 }
 
 html {
-    width:100%;
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
 }
 
 body {
     margin: 0px;
     padding: 0px;
     font-family:monospace;
-    background-color:#171719;
-    color:#3453ff;
+    background-color:#101727;
+    display: table-cell;
+    height: 100%;
 }
 
 p {
     text-indent: 50px;
 }
 
-#bg { 
-    position:relative;
-    /* The image used */
-    background-image: url("img/zurich_lake_long_pan.jpg");
 
-    /* Center and scale the image nicely */
-    background-position: calc(50% + 10px) -460px;
-    background-repeat: no-repeat;
+#bg {
+    height: 100%;
+    /* 
+        position:relative;
+        The image used
+        background-image: url("img/zurich_lake_long_pan.jpg");
+        Center and scale the image nicely
+        background-position: calc(50% + 10px) -460px;
+        background-repeat: no-repeat;
+    */
 }
 
 /* navbar */
@@ -229,18 +223,19 @@ nav {
     text-align: center;
     font-weight: bold;
     padding-top: 5px;
+    padding-bottom: 5px;
+    background-color:#171F32;
+
+    vertical-align: top; /* here */
 }
 
 nav a:link,
 nav a:visited {
     height: 100%;
     text-decoration: none;
-    padding-top: 6px;
-    padding-bottom: 6px;
     padding-right: 5px;
     padding-left: 5px;
-
-    color: #3453ff;
+    color:#FF611D;
 }
 
 nav a:hover,
@@ -263,14 +258,27 @@ nav a:active {
 
 #home_banner {
     text-align: center;
-    color: #3453ff;
+    /* color:#3453ff;*//* only larger screens */
+    
+
+    margin-top: 50%;
+    margin-bottom: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+    margin-top: 20px;
     margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #slogan {
     margin-top: 45px; 
     font-size: 22pt;
-
+}
+#tagline {
+    color:#FF611D; 
+    font-weight: bold;
 }
 
 #home_description {
@@ -281,7 +289,6 @@ nav a:active {
 }
 
 #content {
-    position:relative;
     font-size: 15px;
     width: 100%;
     min-width: 200px;
@@ -289,7 +296,8 @@ nav a:active {
     color:white; 
     margin:0 auto;
     text-align: center;
-    overflow: auto;
+    height: 100%;
+    vertical-align: middle;
 }
 #content::-webkit-scrollbar {
   display: none;
@@ -305,9 +313,8 @@ nav a:active {
 .storybox {
     padding: 15px;
     margin-bottom: 20px;
-    line-height: 150%;
     text-align: left;
-    background-color:rgba(15, 22, 38, .8);
+    background-color:#171F32;
     display:inline-block;
 }
 
@@ -325,16 +332,14 @@ nav a:active {
     font-weight: bold;
     margin-bottom: 20px;
     padding: 15px;
-    height:520px;
-    
-    background-color:rgba(15, 22, 38, .8);
+
+    background-color:#171F32;
     display:inline-block;    
 }
 
 #icons {
     padding-right:10%;
     padding-left: 10%;
-    width: 10%;
     margin-top:10px;
     text-align: center;
     display: inline-block;
@@ -342,7 +347,6 @@ nav a:active {
 }
 
 #links {
-    width: 70%;
     margin-top:10px;
     display: inline-block;
     text-align: center;
@@ -357,7 +361,7 @@ nav a:active {
     font-weight: bold;
     padding: 15px;
     padding-top: 0px;
-    background-color:rgba(15, 22, 38, .8);
+    background-color:#171F32;
 }
 
 a.stats {
@@ -391,8 +395,7 @@ li {
 /* Projects */
 .project {
     margin-bottom: 15px;
-    background-color:rgba(15, 22, 38, .8);
-    line-height: 130%;
+    background-color:#171F32;
     position: relative;
 
 }
@@ -404,7 +407,6 @@ li {
 
 .project_link {
     color:white;
-    line-height: 160%;
     font-weight:bold;
     margin-top:10px;
     margin-bottom:10px;
@@ -416,7 +418,6 @@ li {
     padding-bottom: 15px;
     padding-left: 15px;
 
-    height: 100%;
     padding-right:15px;
     display: inline-block;
     text-align: left;
@@ -434,7 +435,7 @@ li {
     padding: 10px;
     padding-top: 0px;
     margin-bottom: 10px;
-    background-color:rgba(15, 22, 38, .75);
+    background-color:#171F32;
 }
 
 #pan{
