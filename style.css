@@ -1,3 +1,9 @@
+
+
+:root {
+    --BACKGROUND_COLOR: #4679bd;
+  }
+
 /* only larger screens */
 @media only screen and (min-width: 650px) {
 
@@ -438,4 +444,12 @@ li {
 #about_me_point {
     margin-bottom: 0px;
     font-weight: 200;
+}
+
+h1 {
+    color: #FF611D;
+}
+
+h2 {
+    color: #FF611D;
 }
